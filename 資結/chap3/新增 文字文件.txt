@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+# define maxx 10 
+# define maxy 10 
+
+int maze[maxx][maxy] = {
+    {1, 0, 1, 0, 0, 0, 0, 0, 0, 0},
+    {1, 0, 1, 1, 1, 1, 1, 1, 1, 0},
+    {1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+    {0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+};
+
+// 起點和終點坐標
+int start[2] = {0, 1};
+int end[2] = {9, 9};
+
+void find(int nowx, int nowy) {
+    if (nowx < 0 || nowx >= maxx || nowy < 0 || nowy >= maxy || maze[nowx][nowy] == 1||maze[nowx][nowy] == 2)
+        return;
+    if (nowx == end[0] && nowy == end[1]) {
+        printf("(%d, %d)\n", nowx, nowy);
+        return;
+    }
+    maze[nowx][nowy] = 2;
+    printf("(%d, %d)\n", nowx, nowy);  // 顯示目前的座標
+    find(nowx + 0, nowy - 1);
+    find(nowx - 1, nowy + 0);
+    find(nowx + 0, nowy + 1);
+    find(nowx + 1, nowy + 0);
+    maze[nowx][nowy] = 0;
+}
+
+int main() {
+    printf("找到的路徑：\n");
+    find(start[0], start[1]);
+    return 0;
+}
+

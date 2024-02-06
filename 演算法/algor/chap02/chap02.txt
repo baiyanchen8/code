@@ -1,0 +1,71 @@
+x ALGORITHM ANALYSIS
+    - GAOL 
+        分析 algorithm's time complex
+    - Analytical method
+        time    |example
+        1       |a=b+1
+        logN    |for(i=N;i>1;i/=2){}   
+        N       |for(i=0;i<N;i++)
+        NlogN   |see merge sort
+        N^2     |for(i=0;i<N;i++){  for(j=0;j<N;j++)    }
+        N^3     |for(i=0;i<N;i++){ for(j=0;j<N;j++){ for(k=0;k<N;k++) } }
+        2^N     |see combinatotial search
+    - theory of ALGORITHM
+        ! best/worst case
+            % best case
+                lowwer bound→因為best case時間一定最短->bigO
+            % worst case
+                upper bound→因為 worst case時間一定最常->(bigOmega)
+            
+    - example
+        % binary search
+            ! GAOL:
+                use two pointer left & right to find index of target 
+            ! method :
+                if array[mid] == target :
+                    return mid
+                elif array[mid]<target :
+                    mid = left
+                else :
+                    mid = right
+            ! java give method in Arrary class
+                private static int binarySearch0(int[] a, int fromIndex, int toIndex,int key) {
+                    int low = fromIndex;
+                    int high = toIndex - 1;
+
+                     while (low <= high) {
+                        int mid = (low + high) >>> 1;
+                        int midVal = a[mid];
+
+                        if (midVal < key)
+                            low = mid + 1;
+                        else if (midVal > key)
+                            high = mid - 1;
+                        else
+                            return mid; // key found
+                        }
+                    return -(low + 1);  // key not found.
+                    //we can use it at sorted array to find where to insert 
+                    //if small to large from left to right
+                }
+            ! time complex
+                logN ==>因為每次都刪除一半的搜尋空間
+        % twosum
+            ! GAOL :
+                use two pointer left & right to find the index  that  two pointer's sum  equal to target
+            ! method:
+                while( left < right ):
+                    if( left+right == target ):
+                        return ( left , right )
+                    elif(left+right < target):
+                        left++
+                    else:
+                        right--
+            ! time complex:
+                N
+        % 3sum
+            ! method:
+                for(i=0;i<N-2;i++):
+                    twosum
+            ! time complex:
+                N^2

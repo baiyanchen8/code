@@ -1,0 +1,114 @@
+(1-a)
+select S.name 
+from MovieStar as A, StarsIn as B
+where S.movieTitle = 'Titanic'and S.starName = F.name and F.gender ='male';
+(1-b)
+select B.starName
+from Movies as A , StarsIn as B
+where A.year =1995 and A.studioName ='MGM' and B.movieTitle =A.title ;
+(1-c)
+select presc#
+from Studio 
+where name ='MGM';
+(1-d)
+select  F.name
+from Movies as A , Movies as B
+where A.length > S.length and S.title ='Gone With the Wind';
+(1-e)
+select A.name 
+from MovieExec as A,MovieExec as B
+where A.netWorth > B.netWorth and B.name ='Merv Griiffin';
+(2-a)
+select A.starName
+from StarsIn as A , Movies as B
+where (B.year =1980 or B.title like '%Love%') and B.title =A.movieTitle;
+(2-b)
+select name
+from MovieExec 
+where netWorth > 10000000;
+(2-c)
+select name
+from MovieStar
+where gender ='male' or address like '%Malibu%';
+(3-a)
+(1)
+select Model
+from Printer
+where Price >= all( select Price from Printer);
+(2)
+select Model
+from Printer
+where Price = (select Max(Price) from Printer);
+
+(3-b)
+(1)
+with A(Model ,Price) as
+((  select Model ,Price from Printer    )union(
+    select  Model ,Price from PC        )union(
+    select  Model ,Price from Laptop    ))
+select Model
+from A
+where A.Price >= all(select Price from A);
+(2)
+with A(Model ,Price) as
+((  select Model ,Price from Printer    )union(
+    select  Model ,Price from PC        )union(
+    select  Model ,Price from Laptop    ))
+select Model
+from A
+where A.Price = (select Max(Price) from A);
+
+(3-c)
+(1)
+with A as ( select * 
+            from PC 
+            where PC.ram <= all (select ram from PC))
+select * 
+from A
+where   A.speed >= all(select speed from A) ;
+(2)
+with A as ( select * 
+            from PC 
+            where PC.ram = all (select Max(ram) from PC))
+select * 
+from A
+where   A.speed >= all(select Max(speed) from A) ;
+
+(4-a)
+select avg(speed)
+from PC;
+ANS=>2.25
+
+(4-b)
+with A(Price,Model) as
+((select Price,Model from PC) 
+union (select Price,Model from Laptop))
+select avg(Price)
+from A
+where A.Model in (
+    select Model
+    from Product
+    where maker = 'D'
+);
+maker   |Model  | type  | Price
+D       |1008   |PC     |770
+D       |1009   |PC     |650        => avg= 730
+D       |1010   |PC     |770
+
+(5-a)
+insert into Classes 
+values ('Vittorio Veneto', 'bb', 'Italy', 9, 15, 41000);
+insert into Ships 
+values
+    ('Vittorio Veneto', 'Vittorio Veneto', 1940),
+    ('Italia', 'Vittorio Veneto', 1940),
+    ('Roma', 'Vittorio Veneto', 1942);
+
+結果是Classes新增一個turple
+在Ships中新增三艘船
+
+(5-b)
+Delete from Ships
+where name in (select ship from Outcomes where result ='sunk')
+
+結果是將在outcomes table中result = 'sunk'的船從Ships中刪掉

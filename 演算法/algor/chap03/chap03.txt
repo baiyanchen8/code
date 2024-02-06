@@ -1,0 +1,29 @@
+x unknow size arrary
+!!                                                                                  !!
+    - linklist
+        % practice 1
+            class node:
+                int  item
+                node next
+        % 優缺
+            優  |不會浪費空間
+            缺  |時間複雜度高(每次新增一個空間便要執行一次)
+        % pratice 2
+            import java.util.LinkedList
+            !! LinkedList<String> sites = new LinkedList<String>();
+        % 參考網址
+            https://www.runoob.com/java/java-linkedlist.html
+!!                                                                                  !!
+    - resizing arrary 
+        % partice method 1
+            import java.util.ArraryList
+            !! ArraryList<String> sites = new ArraryList<String>();
+        % 參考網址
+            https://www.runoob.com/java/java-arraylist.html
+        % pratice method 2
+            ! method 
+                if(used of arrary>1/2*len of arrary):
+                    resize(arrary,2*len)
+            ! 優缺
+                優  |時間複雜度較低
+                缺  |容易空間爆炸&resize的次數直接影響time cost

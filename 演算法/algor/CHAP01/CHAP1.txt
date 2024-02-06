@@ -1,0 +1,98 @@
+x INTRODUCT OF ALGORITHM
+    - stpes to developing a usable algorithm
+        a.model the problem
+        b.find the way /algorithm to fix it
+        c.is it good to use ?
+        d.if not ,figure out why
+        e.find a way to improve it
+        f.iterate till satisfied
+    - union find ALGORITHM
+        % Question:
+            現在有多筆兩兩組合(ex: (1==2),(2==3)-->1==3)的資料；現在給定x、y,
+            請問x、y是否為同一集合。
+        % Quickfind  (QfindUF)
+            ! 做法:
+                以Arrary index 作為數字&以arrary content 作為set的標記值,實現快速尋找功能
+                也可視為只有一層的degenaration tree
+            ! 優點:
+                簡單,好寫
+            ! 缺點:
+                浪費空間,無法保存初始資料,在做Uion時要全部重跑
+            ! logic:
+                # STEP1:initial(4)   -array length=4
+                    index   |0  |1  |2  |3
+                    content |0  |1  |2  |3
+                # STEP2:union(1,2) -1==2
+                    index   |0  |1  |2  |3
+                    content |0  |2  |2  |3
+                # STEP3:union(2,3) -2==3
+                    index   |0  |1  |2  |3
+                    content |0  |3  |3  |3
+                # STEP4:check(2,3)-if(array(2)==array(3)) true
+                    find(2)==3
+                    find(3)==3
+                    ==>2&3為同一集合
+            ! tiem complex
+                |initial|union  |find   |check  |
+                |N      |N      |1      |1      |
+                N=length of array
+        % Quick union (Qunion)
+            ! 做法:
+                以 union 的手法做出degenaration tree
+                ex:
+                index   |0  |1  |2  |3
+                content |3  |3  |2  |2
+                0&1->3->2
+            ! 優點:
+                保存初始資料
+            ! 缺點: 
+                在確認xy是否為同一set時，會需要額外time cost尋找是否相同
+            ! time complex
+                |initial|union  |find   |check  |
+                |N      |H      |H      |H      |
+                N=length of array
+                H=tree Height
+        % wheight union(Wunion)
+            ! 做法:
+                以 Quick union 基本一致
+                !! but
+                因為 TREE Height 有可能太高
+                所以 加入限制高度
+
+            ! 優點:
+                差不多啦
+            ! 缺點: 
+                在確認xy是否為同一set時，會需要額外time cost尋找是否相同
+            ! time complex
+                |initial|union  |find   |check  |
+                |N      |H      |H      |H      |
+                N=length of array
+                H=tree Height   
+        % wheight union+path compression(Wunionpc)
+            ! 做法:
+                wheight union
+                +
+                path compression
+                !! 在做find 時同時將所有經過的node指向root
+
+            ! 優點:
+                差不多啦
+            ! 缺點: 
+                在確認xy是否為同一set時，會需要額外time cost尋找是否相同
+            ! time complex
+                |initial|union  |find   |check  |
+                |N      |H      |H      |H      |
+                N=length of array
+                H=tree Height   
+    - summarize
+        % time complex
+            ! worst case 
+                algorithm   |initial|union  |find   |check  |tiem cost  |
+                QfindUF     |N      |N      |1      |1      |MN         |
+                Qunion      |N      |N      |H      |H      |MN         |
+                Wunion      |N      |H      |H      |H      |N+MlogN    |
+                Wunion+PC   |N      |H      |H      |H      |N+Mlg*N    |
+                N=length of array
+                H=tree Height
+                M=frequency of using union operator
+                lg*16=>log(log(log(16)))=>3

@@ -1,0 +1,127 @@
+x Elementary Sorting Algorithm
+    - goal 
+        using sorting algorithm to fix many problem in life
+    - def
+        % inversion 
+            |1  |2  |3  |0
+            ->(1,0),(2,0),(3,0)
+        % partially-sorted array
+            if(num of inversion<=c*N)
+                return ture
+            else
+                return false
+            c->constanst
+            N->length of arrary
+    - sum up
+        % bigO
+            sort    |best   |average    |worst
+            select  |n^2    |n^2        |n^2
+            insert  |n      |n^2        |n^2
+            shell   |nlogn  |?          |n^(3/2)
+            goal    |N      |NlogN      |NlogN
+-------------------------------------------------------------------------------------------
+    - selection sort
+        % explan
+            !! 自己看這麼簡單
+        % short code
+            for(i=0;i<length;i++):
+                for(k=i+1;k<length;k++):
+                    if(a[k]<a[min]):
+                        min=k
+                arr.swap(i,min)
+        % time complexity
+            |best   |worst  |average
+            |n*n/2  |n*n/2  |n*n/2
+--------------------------------------------------------------------------------------------
+    - insertion sort
+        % normal method
+            ! explan
+                1   |2  |4  |5  insert3
+                # first place 3 on array's end
+                1   |2  |4  |5  |3  
+                # second exchange 3,5
+                1   |2  |4  |3  |5
+                # third exchange 3,4
+                1   |2  |3  |4  |5
+            ! short code
+                for(i=0;i<arr.length;i++){
+                    for(j=i;j>0;j--){
+                        if(arr[j]<arr[j-1]){
+                            k=arr[j-1];
+                            arr[j-1]=arr[j];
+                            arr[j]=k;
+                        }else{
+                            break;
+                        }
+                    }
+                }
+            ! time complexity
+                case    |complexity |case
+                best    |n-1        |1,2,3,4,5,6
+                worst   |(n^2)/2    |reverse array
+                average |O(n*n)     |
+
+        % method 2--> binary insertion sort
+            ! explain
+                insertion + binary search
+
+                1   |2  |4  |5  insert3
+                # first use binary search find where to insert
+                1   |2  |4  |5  |2<3<4
+                # insert
+                1   |2  |3  |4  |5
+            ! time complexity
+                NlogN
+---------------------------------------------------------------------------------------
+    - shell sort
+        % idea
+            以gap為間隔，每間隔一個gap便做insertion_sort
+        % short code
+            int k=2;    \\ k=1,3,7,15......(one of choice)
+            for(int gap=k-1;gap<N;k*=k){
+                for(int i=gap;i<n;i++){
+                    int temp = arr[i];
+                    for (int j = i; j >= gap && arr[j - gap] > temp; j -= gap) 
+                        arr[j] = arr[j - gap];
+                    arr[j] = temp;
+                }
+                if(arr is sorted)
+                    return
+                else 
+                    continue
+            }
+        % time cost
+            general |gap            |worst cost   
+            n/2^k   |n/2,n/4,n/8    |n^2    
+            2^K-1   |1,3,7,15...    |n^(3/2)    
+            2^K+1   |1,3,5,9....    |n^(3/2)    
+---------------------------------------------------------------------------------------
+    - shuffle sort
+        % idea
+            for 打亂
+            so 要sort
+        % method Knuth shuffle sort
+            ! idea
+                i------------------->
+                |1  |2  |3  |4  |5  |6
+                    i                   //swap(arr,i,random(0~i))     
+                |1  |2  |3  |4  |5  |6
+                        i               //swap(arr,i,random(0~i))     
+                |2  |1  |3  |4  |5  |6
+                            i           //swap(arr,i,random(0~i))     
+                |2  |3  |1  |4  |5  |6
+                                i       //swap(arr,i,random(0~i))     
+                |2  |4  |3  |1  |5  |6
+                                    i   //swap(arr,i,random(0~i))     
+                |5  |1  |3  |4  |2  |6
+                         
+                |2  |6  |3  |4  |5  |1
+            ! short code
+                Random rand = new Random();
+                int []x=new int [len];
+                x[0]=1;
+                for(int i=1;i<len;i++){
+                    x[i]=i+1;
+                    swap(x,i,rand.nextInt(i));
+                }
+
