@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 int find_kid(int parent){
+    // only left kid , rightkid =left kid +1 
     return (parent+1)*2-1;
 }
 int find_P(int kid){
