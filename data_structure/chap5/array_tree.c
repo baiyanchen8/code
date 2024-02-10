@@ -17,7 +17,7 @@ int main (int arg,char *args[]){
     for (int i=0;i<n;i++){
         tree[i]=i+1;
     }
-    printf("parent %d, kid %d %d \n",tree[t],tree[find_kid(t)],tree[find_kid(t)+1]);
-    printf("kid %d, parent  %d \n",tree[j],tree[find_P(j)]);
+    printf("parent %d(%d+%d)kid %d %d \n",tree[t],t,1,tree[find_kid(t)],tree[find_kid(t)+1]);
+    printf("kid %d(%d+%d), parent  %d \n",tree[j],j,1,tree[find_P(j)]);
     return 0;
 }
