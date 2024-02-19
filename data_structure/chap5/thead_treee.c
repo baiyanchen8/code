@@ -31,7 +31,7 @@ void root_init(struct node * root){
 }
 int main()
 {
-    srand((int)time(NULL));
+    srand((unsigned int)time(NULL));
     struct node * root=c_node('a');
     
     printf("%c\n",root->data);
@@ -61,13 +61,13 @@ struct node *inorder_next(struct node *A){
 // 中序遍歷並印出結果
 void inorder_thread(struct node *A){
     struct node *tmp = A;
-    while (tmp->bool_left=False)
+    while (tmp->bool_left==False)
         tmp=tmp->pointer_left;
     printf("%c ", tmp->data);
     do{
         tmp = inorder_next(tmp);
         printf("%c ", tmp->data);
-    } while(A != tmp);
+    } while(A != inorder_next(tmp));
 }
 
 struct node * c_node (char data){

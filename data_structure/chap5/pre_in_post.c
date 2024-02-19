@@ -57,6 +57,24 @@ void post(struct node *A) {
     }
 }
 
+
+void levelorder(struct node * A){
+    struct node *Queue[10000];
+    int front=0,rear=0;
+    if (A)
+        Queue[rear++]=A;
+    for(;;){
+        A=Queue[front++];
+        if (!A) break;
+        printf("%c ",A->data);
+        if (A->left){
+            Queue[rear++]=A->left;
+        }
+        if (A->right){
+            Queue[rear++]=A->right;
+        }
+    }
+}
 // 顯示樹的形狀及內容
 void show(struct node *A) {
     printf("Inorder (中序): ");
@@ -65,6 +83,8 @@ void show(struct node *A) {
     pre(A);
     printf("\nPostorder (後序): ");
     post(A);
+    printf("\nlevelorder : ");
+    levelorder(A);
     printf("\n");
 }
 
