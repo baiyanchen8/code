@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature and Humidity Data</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* 禁用滚动条 */
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        canvas {
+            max-width: 40%; /* 設置最大寬度為窗口寬度的一半 */
+            max-height: 80%; /* 設置最大高度為窗口高度的80% */
+            margin: 10px; /* 上下左右各留出10px的空白 */
+        }
+
+        @media screen and (max-width: 600px) {
+            /* 在小於600px的屏幕上應用的樣式 */
+            canvas {
+                max-width: 80%; /* 設置最大寬度為窗口寬度的90% */
+                max-height: 50%; /* 設置最大高度為窗口高度的50% */
+                margin: 10px; /* 上下左右各留出10px的空白 */
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="chart-container">
+        <canvas id="temperatureChart" width="400" height="400"></canvas>
+        <canvas id="humidityChart" width="400" height="400"></canvas>
+    </div>
+
+    <script>
+        let temperatureData = [];
+        let humidityData = [];
+        let timeLabels = [];
+
+        function updateCharts(temperature, humidity) {
+            temperatureData.push(temperature);
+            humidityData.push(humidity);
+            timeLabels.push(new Date().toLocaleTimeString());
+
+            if (temperatureData.length > 20) {
+                temperatureData.shift();
+                humidityData.shift();
+                timeLabels.shift();
+            }
+
+            temperatureChart.data.labels = timeLabels;
+            temperatureChart.data.datasets[0].data = temperatureData;
+            temperatureChart.update();
+
+            humidityChart.data.labels = timeLabels;
+            humidityChart.data.datasets[0].data = humidityData;
+            humidityChart.update();
+        }
+
+        const temperatureCtx = document.getElementById('temperatureChart').getContext('2d');
+        const humidityCtx = document.getElementById('humidityChart').getContext('2d');
+
+        const temperatureChart = new Chart(temperatureCtx, {
+            type: 'line',
+            data: {
+                labels: timeLabels,
+                datasets: [{
+                    label: '溫度 (°C)',
+                    data: temperatureData,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false, // 禁用保持比例
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            suggestedMin: 14, // 指定y軸的最小值
+                            suggestedMax: 40,// 指定y軸的最大值
+                            beginAtZero: true, // 從零開始顯示刻度
+                            stepSize: 1, // 刻度間隔
+                            callback: function(value) {
+                                return value.toFixed(0); // 將刻度值格式化為整數
+                            }
+                        }
+                    }]
+                }
+            }
+        });
+
+        const humidityChart = new Chart(humidityCtx, {
+            type: 'line',
+            data: {
+                labels: timeLabels,
+                datasets: [{
+                    label: '濕度 (%)',
+                    data: humidityData,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                maintainAspectRatio: false, // 禁用保持比例
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            suggestedMin: 0, // 指定y軸的最小值
+                            suggestedMax: 70 ,// 指定y軸的最大值
+                            stepSize: 1, // 刻度間隔
+                            callback: function(value) {
+                                return value.toFixed(0); // 將刻度值格式化為整數
+                            }
+                        }
+                    }]
+                }
+            }
+        });
+
+        function fetchDataAndUpdateCharts() {
+            fetch('/get_data')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('錯誤：', data.error);
+                } else {
+                    const temperature = data.temperature;
+                    const humidity = data.humidity;
+                    console.log(`接收到的溫度：${temperature}°C，濕度：${humidity}%`);
+                    updateCharts(temperature, humidity);
+                }
+            })
+            .catch(error => console.error('錯誤：', error));
+        }
+
+        fetchDataAndUpdateCharts(); // 初始載入數據
+
+        // 每 5 秒重新載入數據
+        setInterval(fetchDataAndUpdateCharts, 5000);
+    </script>
+</body>
+
+</html>

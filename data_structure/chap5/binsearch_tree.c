@@ -7,6 +7,7 @@ struct node
     struct node * right;
     int key;
 };
+
 struct node * search (struct node *head,int key);
 struct node * inter_search (struct node *head,int key);
 struct node * modify_search (struct node *head,int key);
@@ -15,7 +16,6 @@ void delete (struct node **head,int key);
 void threeWayJoin(struct node *s,struct node *m,struct node *b);
 struct node * twoWayJoin(struct node *s,struct node *b);
 void split(struct node **tree,int key,struct node **small,struct node **mid,struct node **big);
-
 
 // 層序遍歷打印二元樹
 void level_order_traversal(struct node *root) {
@@ -178,6 +178,7 @@ struct node * inter_search (struct node *head,int key){
     }
     return NULL;
 }
+
 struct node * modify_search (struct node *head,int key){
     struct node * tmp=head;
     struct node * past=NULL;
@@ -209,6 +210,7 @@ void insert (struct node **head,int key){
         }
     }
 }
+
 void delete(struct node **head, int key) {
     struct node *past = NULL;
     struct node *target = *head;
@@ -216,7 +218,6 @@ void delete(struct node **head, int key) {
     // 找到要刪除的節點
     while (target) {
         if (target->key == key) {
-            printf("p %d t %d\n", past ? past->key : -1, target->key);
             
             struct node *s = target->left;
             struct node *b = target->right;
@@ -243,6 +244,3 @@ void delete(struct node **head, int key) {
         }
     }
 }
-
-
-
