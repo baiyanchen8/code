@@ -97,9 +97,9 @@ def main_thread():
                     exit()
             
             # 清除顯示器
-            # screen.fill(fuchsia) 
+            screen.fill(fuchsia) 
             # 顯示手把圖片
-            # screen.blit(resized_controller_image, (10, 70))
+            screen.blit(resized_controller_image, (10, 70))
             h = 70  # 設定填充的起始高度
             ph = 5
             # 左搖桿背景

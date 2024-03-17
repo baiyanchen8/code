@@ -8,7 +8,7 @@ struct Queue {
     int capacity;
 };
 
-// ªì©l¤Æ¦î¦C
+// ï¿½ï¿½lï¿½Æ¦ï¿½C
 void Q_init(struct Queue *Q) {
 	
     Q->arr = (int *)malloc(sizeof(int) * 20);
@@ -17,7 +17,6 @@ void Q_init(struct Queue *Q) {
     Q->capacity = 20;
 }
 
-// ¤J¦î¦C
 void enqueue(struct Queue *Q, int num) {
     if (Q->len >= Q->capacity / 2) {
         Q->capacity *= 2;
@@ -26,13 +25,11 @@ void enqueue(struct Queue *Q, int num) {
     Q->arr[Q->len++] = num;
 }
 
-// ¥X¦î¦C
 int deq(struct Queue *Q) {
     int ans = Q->arr[0];
     Q->len -= 1;
     Q->capacity -= 1;
 	
-    // ±N°}¦C«ü¼Ð²¾°Ê¨ì¤U¤@­Ó¦ì¸m
     if (Q->len>0){
     	Q->arr += 1;
 	}
@@ -41,26 +38,26 @@ int deq(struct Queue *Q) {
 
 int main() {
     struct Queue myQueue;
-    Q_init(&myQueue); // ¨Ï¥Î '&' ¨Ó¶Ç»¼µ²ºcªº«ü¼Ð
+    Q_init(&myQueue); // ï¿½Ï¥ï¿½ '&' ï¿½Ó¶Ç»ï¿½ï¿½ï¿½ï¿½cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     int i;
     for (i = 0; i < 10; i++) {
-        enqueue(&myQueue, i); // ¨Ï¥Î '&' ¨Ó¶Ç»¼µ²ºcªº«ü¼Ð
+        enqueue(&myQueue, i); // ï¿½Ï¥ï¿½ '&' ï¿½Ó¶Ç»ï¿½ï¿½ï¿½ï¿½cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
-    printf("¤J¦î¦C«áªº¤¸¯À¡G");
+    printf("ï¿½Jï¿½ï¿½Cï¿½áªºï¿½ï¿½ï¿½ï¿½ï¿½G");
     for (i = 0; i < myQueue.len; i++) {
-        printf("%d  ", myQueue.arr[i]); // ­×¥¿¦L¥X°}¦C¤¸¯Àªº¤è¦¡
+        printf("%d  ", myQueue.arr[i]); // ï¿½×¥ï¿½ï¿½Lï¿½Xï¿½}ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¦¡
     }
     printf("\n");
 
-    printf("¥X¦î¦Cªº¤¸¯À¡G");
+    printf("ï¿½Xï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½G");
     for (i = 0; i < 10; i++) {
         int t = deq(&myQueue);
-        printf("%d  ", t); // ­×¥¿¦L¥X°}¦C¤¸¯Àªº¤è¦¡
+        printf("%d  ", t); // ï¿½×¥ï¿½ï¿½Lï¿½Xï¿½}ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¦¡
     }
     printf("\n");
-    // ÄÀ©ñ°O¾ÐÅé
+    // ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½
     free(myQueue.init);
 
     return 0;
