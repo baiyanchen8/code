@@ -1,21 +1,13 @@
-import tkinter as tk
-import win32gui
-import win32con
+from plyer import notification
 
-def set_topmost(window):
-    hwnd = win32gui.GetForegroundWindow()
-    win32gui.SetWindowPos(window, win32con.HWND_TOPMOST, 0, 0, 0, 0,
-                          win32con.SWP_NOMOVE | win32con.SWP_NOSIZE)
+# 設定通知的標題、訊息內容和持續時間
+title = '通知'
+message = '這是一個使用plyer庫發送的通知訊息'
+duration = 5  # 持續時間（秒）
 
-# 建立主視窗
-root = tk.Tk()
-root.title("永遠最上層的桌面工具")
-
-# 隱藏視窗
-root.withdraw()
-
-# 設置視窗永遠最上層
-set_topmost(root.winfo_id())
-
-# 啟動主迴圈
-root.mainloop()
+# 發送通知
+notification.notify(
+    title=title,
+    message=message,
+    timeout=duration
+)
