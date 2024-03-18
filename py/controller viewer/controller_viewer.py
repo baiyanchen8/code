@@ -114,6 +114,32 @@ def main_thread():
         screen.blit(resized_controller_image, (10, 70))
         draw_buttons(screen, joystick, resized_controller_image, rb_image, lb_image, dd_image, du_image, dl_image, dr_image)
         
+        # 左搖桿背景
+        joystick_bg_pos = (85, 130)
+        joystick_bg_radius = 17
+        pg.draw.circle(screen, (250, 250, 250), joystick_bg_pos, joystick_bg_radius)
+
+        # 左搖桿實際位置
+        joystick_x = int(joystick.LeftJoystickX * 17)  
+        joystick_y = int(-joystick.LeftJoystickY * 17)  
+        joystick_pos = (joystick_bg_pos[0] + joystick_x, joystick_bg_pos[1] + joystick_y)
+
+        # 顯示右搖桿實際位置
+        pg.draw.circle(screen, (0, 0, 255), joystick_pos, 10)
+        
+        # 右搖桿背景
+        joystick_bg_pos = (200, 180)
+        joystick_bg_radius = 17
+        pg.draw.circle(screen, (250, 250, 250), joystick_bg_pos, joystick_bg_radius)
+
+        # 右搖桿實際位置
+        joystick_x = int(joystick.RightJoystickX * 17)  
+        joystick_y = int(-joystick.RightJoystickY * 17)  
+        joystick_pos = (joystick_bg_pos[0] + joystick_x, joystick_bg_pos[1] + joystick_y)
+
+        # 顯示右搖桿實際位置
+        pg.draw.circle(screen, (0, 0, 255), joystick_pos, 10)
+
         lt_percentage = joystick.LeftTrigger
         rt_percentage = joystick.RightTrigger
         
@@ -130,7 +156,7 @@ def main_thread():
         rt_fill_rect = pg.Rect(210, 5, 60, rt_height)
         screen.blit(resized_rt_frame_image, (210, 5), special_flags=pg.BLEND_RGBA_MULT)
         pg.draw.rect(screen, (0, 0, 0), rt_fill_rect)
-
+        
         pg.display.flip()
         clock.tick(60)
 
