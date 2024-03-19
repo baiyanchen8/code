@@ -37,6 +37,8 @@ int dequeue(){
         if (tail== queue){
             int a=queue->data;
             free(queue);
+            queue = NULL;
+            tail = NULL;
             return a;
         }
 
@@ -50,6 +52,7 @@ int dequeue(){
         return tre;
     }
 }
+
 
 void dfs(int now){
     visited[now] = 1;

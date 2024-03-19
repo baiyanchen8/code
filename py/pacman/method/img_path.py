@@ -50,14 +50,14 @@ filearr={
     "winnertime":"./savefile/winner_time.json"
 }
 dir_icon={
-    "up":"picture\direction_icon/up.png",
-    "down":"picture\direction_icon/down.png",
-    "left":"picture\direction_icon/left.png",
-    "right":"picture\direction_icon/right.png",
-    "speedup":"picture\direction_icon/speedup.png",
-    "pause":"picture\direction_icon/pause.png"
+    "up":"picture/direction_icon/up.png",
+    "down":"picture/direction_icon/down.png",
+    "left":"picture/direction_icon/left.png",
+    "right":"picture/direction_icon/right.png",
+    "speedup":"picture/direction_icon/speedup.png",
+    "pause":"picture/direction_icon/pause.png"
 }
 font_path={
-    "retro":"font\Retro.ttf",
+    "retro":"font/Retro.ttf",
     "keyboard":"font/font_keyboard.ttf"
 }
