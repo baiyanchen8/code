@@ -1,18 +1,17 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "c:/Users/陳柏硯/Documents/GitHub/code/data_structure/chap5",
-      "program": "c:/Users/陳柏硯/Documents/GitHub/code/data_structure/chap5/build/Debug/outDebug",
+      "externalConsole": false,
+      "cwd": "/home/baiyan/文件/GitHub/code/data_structure/chap6",
+      "program": "/home/baiyan/文件/GitHub/code/data_structure/chap6/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/Users/陳柏硯/Downloads/x86_64-13.2.0-release-posix-seh-msvcrt-rt_v11-rev0/mingw64/bin",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
