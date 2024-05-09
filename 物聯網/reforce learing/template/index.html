@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自訂網格</title>
+  <style>
+    .grid-container {
+      display: grid;
+      gap: 1px;
+      margin-bottom: 10px;
+    }
+
+    .grid-item {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+
+    /* 不同狀態的顏色 */
+    .path { background-color: #fff; }
+    .obstacle { background-color: #333; }
+    .start { background-color: #00f; }
+    .end { background-color: #f00; }
+  </style>
+</head>
+<body>
+  <label for="blockCount">請選擇方塊的數量：</label>
+  <input type="number" id="blockCount" min="1" max="100" value="64">
+  <button onclick="generateGrid()">生成網格</button>
+  <select id="blockType">
+    <option value="path">通道</option>
+    <option value="obstacle">障礙物</option>
+    <option value="start">起點</option>
+    <option value="end">終點</option>
+  </select>
+
+  <div class="grid-container" id="gridContainer"></div>
+
+  <!-- 新增的按鈕 -->
+  <button onclick="sendDataToBackend()">傳送數據到後端</button>
+
+  <script>
+    function generateGrid() {
+      const blockCount = parseInt(document.getElementById('blockCount').value);
+      const gridContainer = document.getElementById('gridContainer');
+
+      // 先清空原有的網格
+      gridContainer.innerHTML = '';
+
+      // 生成網格
+      for (let i = 0; i < blockCount; i++) {
+        const asd = document.createElement('div');
+        asd.style.maxHeight = '22px'; // 這裡可以根據需要設置限高的像素值
+        asd.style.overflowY = 'auto'; // 如果內容超出限高，將自動顯示垂直滾動條
+        asd.style.display = 'flex'; // 內容水平排列
+
+        for (let j = 0; j < blockCount; j++) {
+          const gridItem = document.createElement('div');
+          gridItem.classList.add('grid-item');
+          gridItem.setAttribute('id', `block_${i}_${j}`);
+          gridItem.addEventListener('click', function() {
+            const blockType = document.getElementById('blockType').value;
+            this.className = 'grid-item ' + blockType;
+          });
+          asd.appendChild(gridItem);
+        }
+        gridContainer.appendChild(asd);
+      }
+    }
+
+    // 新增的函式，用於將數據傳送到後端
+    function sendDataToBackend() {
+      const blockCount = document.getElementById('blockCount').value;
+      const blockType = document.getElementById('blockType').value;
+      const mapData = [];
+
+      // 收集地圖上每個方塊的類型
+      for (let i = 0; i < blockCount; i++) {
+        const row = [];
+        for (let j = 0; j < blockCount; j++) {
+          const blockId = `block_${i}_${j}`;
+          const blockElement = document.getElementById(blockId);
+          const blockElementClass = blockElement.className;
+          row.push(blockElementClass.split(' ')[1]); // 只取第二個類別，即方塊的狀態
+        }
+        mapData.push(row);
+      }
+
+      // 傳送數據到後端，這裡只是示例，請替換為實際的後端傳送邏輯
+      // 使用 Fetch API 發送 POST 請求到後端服務器
+      fetch('/saveMapData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ "mapData": mapData, "block": blockCount })
+      })
+      .then(response => response.text())
+      .then(data => console.log(data)) // 顯示服務器的回應
+      .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>

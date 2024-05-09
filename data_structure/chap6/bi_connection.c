@@ -56,7 +56,7 @@ int main(int argc, char const *argv[]) {
     for (int i = 0; i < edgesize; i++) {
         free(edge[i]);
     }
-    free(edge);
+    free(edge);//
 
     return 0;
 }
