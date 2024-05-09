@@ -49,7 +49,8 @@ K1 = screen_width*K2*3/(8*(R1+R2))
 print('\x1b[2J')
 A = 1.0
 B = 1.0
-for i in range(250):
-    render_frame(A, B)
-    A += 0.08
-    B += 0.03
+while True :
+    for i in range(360):
+        render_frame(A, B)
+        A += 0.08
+        B += 0.03
