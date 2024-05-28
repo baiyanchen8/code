@@ -6,6 +6,28 @@ from method.Button import button as button # cool and useless
 import method
 from method.img_path import *
 
+import os
+
+def change_to_file_dir(file_path):
+    # 獲取文件所在目錄的路徑
+    dir_path = os.path.dirname(file_path)
+    
+    try:
+        # 更改工作目錄
+        os.chdir(dir_path)
+        print(f"工作目錄已更改為: {dir_path}")
+    except FileNotFoundError:
+        print(f"找不到文件或目錄: {file_path}")
+    except PermissionError:
+        print("權限不足，無法更改工作目錄")
+
+# 要轉到的文件路徑
+file_path = "/home/baiyan/文件/GitHub/code/py/pacman/"  # 替換為你要轉到的目錄的實際路徑
+
+# 更改工作目錄
+change_to_file_dir(file_path)
+
+
 # Initialize the game
 pg.init() 
 # pg.mixer.init()

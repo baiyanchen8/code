@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>溫濕度數據</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    
+       <select id="timeRangeToggle">
+        <option value="today">Today</option>
+        <option value="last24">Last 24 Hours</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div id="container4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    
+    <script>
+        let temperatureData = [];
+        let humidityData = [];
+        let timeees = [];
+
+        function updateCharts(temperature, humidity, timee) {
+            temperatureData.push(temperature);
+            humidityData.push(humidity);
+            timeees.push(timee);
+            if (temperatureData.length > 20) {
+                temperatureData.shift();
+                humidityData.shift();
+                timeees.shift(); // 移除最舊的時間數據
+            }
+
+            
+            temperatureChart.series[0].setData(temperatureData, false); // Update temperature data
+            temperatureChart.xAxis[0].setCategories(timeees, true); // Update time data
+
+            humidityChart.series[0].setData(humidityData, false); // Update humidity data
+            humidityChart.xAxis[0].setCategories(timeees, false); // Update time data
+
+            temperatureChart.redraw(); // Redraw temperature chart
+            humidityChart.redraw(); // Redraw humidity chart
+        }
+
+        const humidityChart = Highcharts.chart('container2', {
+            chart: {
+                type: 'spline',
+                events: {
+                    load: function () {
+                        setInterval(fetchDataAndUpdateCharts, 5000);
+                    }
+                }
+            },
+            title: {
+                text: '濕度趨勢'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150,
+                labels: {
+                    formatter: function () {
+                        return Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.value);
+                    }
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: '溫度 (°C)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }, {
+                title: {
+                    text: '濕度 (%)'
+                },
+                opposite: true,
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }],
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                        Highcharts.numberFormat(this.y, 2);
+                }
+            },
+            legend: {
+                enabled: true
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                name: '濕度',
+                yAxis: 1,
+                data: humidityData
+            }]
+        });
+        const temperatureChart = Highcharts.chart('container', {
+            chart: {
+                type: 'spline',
+                events: {
+                    load: function () {
+                        setInterval(fetchDataAndUpdateCharts, 5000);
+                    }
+                }
+            },
+            title: {
+                text: '溫度趨勢'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150,
+                labels: {
+                    formatter: function () {
+                        return Highcharts.dateFormat('%Y-%m-%d<br>%H:%M:%S', this.value);
+                    }
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: '溫度 (°C)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }, {
+                title: {
+                    text: '濕度 (%)'
+                },
+                opposite: true,
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }],
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                        Highcharts.numberFormat(this.y, 2);
+                }
+            },
+            legend: {
+                enabled: true
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                name: '溫度',
+                yAxis: 0,
+                data: temperatureData
+            }]
+        });
+
+        function fetchDataAndUpdateCharts() {
+            // 使用實際的服務器端路徑
+            fetch('/get_data')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        console.error('錯誤：', data.error);
+                    } else {
+                        const temperature = data.temperature;
+                        const humidity = data.humidity;
+                        const timee = data.timee;
+                        console.log(typeof timee);
+                        const dateString = "2024-05-14 11:18:41.802108";
+                        const timestamp = new Date(timee).getTime(); // getTime() returns the timestamp in milliseconds
+                        console.log(timestamp);
+                        console.log(`接收到的溫度：${temperature}°C，濕度：${humidity}%,time:${timee}`);
+                        updateCharts(temperature, humidity, timestamp);
+                    }
+                })
+                .catch(error => console.error('錯誤：', error));
+        }
+
+                fetchDataAndUpdateCharts(); // 初始載入數據
+                document.getElementById('timeRangeToggle').addEventListener('change', function() {
+            fetchRangeData(this.value);
+        });
+
+        function fetchRangeData(range) {
+            let url;
+            if (range === 'today') {
+                const today = new Date().toISOString().split('T')[0];
+                url = `/get_range_data?start_time=${today}T00:00:00&end_time=${today}T23:59:59`;
+            } else if (range === 'last24') {
+                const now = new Date();
+                const yesterday = new Date(now);
+                yesterday.setDate(now.getDate() - 1);
+                const yesterdayString = yesterday.toISOString().split('T')[0];
+                url = `/get_range_data?start_time=${yesterdayString}T${now.toISOString().split('T')[1]}&end_time=${now.toISOString().split('T')[0]}T${now.toISOString().split('T')[1]}`;
+            }
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Update charts with fetched data
+                    updateRangeCharts(data.temperature, data.humidity, data.time); // Update range charts
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        const humidityChartRange = Highcharts.chart('container3', {
+            chart: {
+                type: 'spline',
+                events: {
+                    load: function () {
+                        setInterval(fetchDataAndUpdateCharts, 5000);
+                    }
+                }
+            },
+            title: {
+                text: '濕度趨勢'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150,
+                labels: {
+                    formatter: function () {
+                        return Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.value);
+                    }
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: '溫度 (°C)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }, {
+                title: {
+                    text: '濕度 (%)'
+                },
+                opposite: true,
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }],
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                        Highcharts.numberFormat(this.y, 2);
+                }
+            },
+            legend: {
+                enabled: true
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                name: '濕度',
+                yAxis: 1,
+                data: humidityData
+            }]
+        });
+        const temperatureChartRange = Highcharts.chart('container4', {
+            chart: {
+                type: 'spline',
+                events: {
+                    load: function () {
+                        setInterval(fetchDataAndUpdateCharts, 5000);
+                    }
+                }
+            },
+            title: {
+                text: '溫度趨勢'
+            },
+            xAxis: {
+                type: 'datetime',
+                tickPixelInterval: 150,
+                labels: {
+                    formatter: function () {
+                        return Highcharts.dateFormat('%Y-%m-%d<br>%H:%M:%S', this.value);
+                    }
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: '溫度 (°C)'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }, {
+                title: {
+                    text: '濕度 (%)'
+                },
+                opposite: true,
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            }],
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.series.name + '</b><br/>' +
+                        Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                        Highcharts.numberFormat(this.y, 2);
+                }
+            },
+            legend: {
+                enabled: true
+            },
+            exporting: {
+                enabled: false
+            },
+            series: [{
+                name: '溫度',
+                yAxis: 0,
+                data: temperatureData
+            }]
+        });
+        function stringToTimestamp(timeData) {
+            if (!Array.isArray(timeData)) {
+                console.error('timeData is not an array');
+                return [];
+            }
+            const timestamps = timeData.map(timeString => Date.parse(timeString));
+            return timestamps;
+        }
+        function updateRangeCharts(temperatureData,humidityData,timeData) {
+            console.log(temperatureData,humidityData,timeData);
+        // Update data for the range charts
+        temperatureChartRange.series[0].setData(temperatureData);
+        humidityChartRange.series[0].setData(humidityData);
+        const timestamps = stringToTimestamp(timeData);
+
+        temperatureChartRange.xAxis[0].setCategories(timestamps);
+        humidityChartRange.xAxis[0].setCategories(timestamps);
+        };
+    </script>
+</body>
+
+</html>
