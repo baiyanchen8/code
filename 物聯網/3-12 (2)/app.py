@@ -50,6 +50,13 @@ def get_data():
 def get_range_data():
     start_time = request.args.get('start_time')
     end_time = request.args.get('end_time')
+    print("TIMEE",start_time,end_time)
+    a=start_time.split("T")
+    start_time=a[0]+" "+a[1]
+    a=end_time.split("T")
+    end_time=a[0]+" "+a[1]
+
+    print("TIMEE",start_time,end_time)
     db, cursor = get_db()
     try:
         cursor.execute("SELECT * FROM sensor_data WHERE tim1 BETWEEN ? AND ?", (start_time, end_time))
@@ -71,6 +78,25 @@ def get_range_data():
         print(str(e))
         return jsonify({'error': str(e)})
         
+@app.route('/get_day', methods=['GET'])
+def get_day():
+    db, cursor = get_db()
+    if not db or not cursor:
+        return jsonify({'error': '資料庫連接失敗'}), 500
+    try:
+        # 使用 DATE 函數提取日期部分
+        cursor.execute("SELECT DISTINCT DATE(tim1) FROM sensor_data")
+        data = cursor.fetchall()
+        if data:
+            # 轉換日期格式
+            days = [datetime.datetime.strptime(row[0], "%Y-%m-%d").strftime("%Y-%m-%d") for row in data]
+            return jsonify({'days': days})
+        else:
+            return jsonify({'error': '無可用日期資料'})
+    except Exception as e:
+        print(str(e))
+        return jsonify({'error': str(e)})
+
 
 @app.route('/')
 def index():

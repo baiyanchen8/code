@@ -16,7 +16,7 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_holistic = mp.solutions.holistic
 
 # 開啟鏡頭
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("./case2.mp4")
 
 
 def keypoints_to_array(results):
@@ -27,7 +27,7 @@ def keypoints_to_array(results):
     return keypoints_array
 
 
-# 加載模型
+# 加載模型ls
 model = joblib.load('svm_model.pkl')
 
 with mp_holistic.Holistic(
@@ -45,7 +45,7 @@ with mp_holistic.Holistic(
             # 發送POST請求
             try:
                 response = requests.post(
-                    'http://192.168.1.213:5000/post_camera_frame', json=data)
+                    'http://localhost:5000/post_camera_frame', json=data)
                 if response.status_code == 200:
                     print("err sent successfully")
                 else:
@@ -101,7 +101,7 @@ with mp_holistic.Holistic(
         # 發送POST請求
         try:
             response = requests.post(
-                'http://192.168.1.213:5000/post_camera_frame', json=data)
+                'http://localhost:5000/post_camera_frame', json=data)
             if response.status_code == 200:
                 print("Image sent successfully")
             else:
@@ -111,7 +111,7 @@ with mp_holistic.Holistic(
             print("Failed to send image:", e)
 
         # 等待
-        time.sleep(0.2)
+        time.sleep(0.01)
 
 #
 cap.release()

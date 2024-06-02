@@ -55,7 +55,7 @@ def make_stream():
         try:
             while True:
                 yield "data:" + json.dumps(a_camera_view.get_camera_frame()) + "\n\n"
-                time.sleep(0.07)
+                time.sleep(0.01)
         except GeneratorExit:
             print('closed')
 

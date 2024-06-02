@@ -5,7 +5,7 @@
 #define WIFI_SSID "My_wifi" // 更改為你的 WiFi SSID
 #define WIFI_PASSWORD "asdfghjk" // 更改為你的 WiFi 密碼
 
-const char* serverUrl = "http://192.168.46.184:5000/update_data";
+const char* serverUrl = "http://192.168.1.106:5000/update_data";
 #define DHTPIN 2
 
 SimpleDHT11 dht(DHTPIN);

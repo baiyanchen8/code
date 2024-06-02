@@ -58,7 +58,7 @@
                 }
             },
             title: {
-                text: '濕度趨勢'
+                text: '即時濕度趨勢'
             },
             xAxis: {
                 type: 'datetime',
@@ -118,7 +118,7 @@
                 }
             },
             title: {
-                text: '溫度趨勢'
+                text: '即時溫度趨勢'
             },
             xAxis: {
                 type: 'datetime',
@@ -198,23 +198,19 @@
 
         function fetchRangeData(range) {
             let url;
-            if (range === 'today') {
-                const today = new Date().toISOString().split('T')[0];
-                url = `/get_range_data?start_time=${today}T00:00:00&end_time=${today}T23:59:59`;
-            } else if (range === 'last24') {
-                const now = new Date();
-                const yesterday = new Date(now);
-                yesterday.setDate(now.getDate() - 1);
-                const yesterdayString = yesterday.toISOString().split('T')[0];
-                url = `/get_range_data?start_time=${yesterdayString}T${now.toISOString().split('T')[1]}&end_time=${now.toISOString().split('T')[0]}T${now.toISOString().split('T')[1]}`;
-            }
+            const selectedDate = range;
+            url = `/get_range_data?start_time=${selectedDate}T00:00:00&end_time=${selectedDate}T23:59:59`;
+            
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    // Update charts with fetched data
-                    updateRangeCharts(data.temperature, data.humidity, data.time); // Update range charts
+                    if (data.error) {
+                        console.error('錯誤：', data.error);
+                    } else {
+                        updateRangeCharts(data.temperature, data.humidity, data.time);
+                    }
                 })
-                .catch(error => console.error('Error:', error));
+                .catch(error => console.error('錯誤：', error));
         }
 
         const humidityChartRange = Highcharts.chart('container3', {
@@ -355,6 +351,54 @@
         temperatureChartRange.xAxis[0].setCategories(timestamps);
         humidityChartRange.xAxis[0].setCategories(timestamps);
         };
+        async function testGetDays() {
+            try {
+                const response = await fetch('http://localhost:5000/get_day', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+
+                const data = await response.json();
+
+                if (data.error) {
+                    console.error('伺服器錯誤：', data.error);
+                } else {
+                    const days = data.days;
+                    const timeRangeToggle = document.getElementById('timeRangeToggle');
+                    timeRangeToggle.innerHTML = ''; // Clear existing options
+
+                    days.forEach(day => {
+                        const option = document.createElement('option');
+                        option.value = day;
+                        option.textContent = day;
+                        timeRangeToggle.appendChild(option);
+                    });
+
+                    // 添加事件監聽器以獲取選擇日期的數據
+                    timeRangeToggle.addEventListener('change', function () {
+                        fetchRangeData(this.value);
+                    });
+
+                    // Fetch data for the first available day initially
+                    if (days.length > 0) {
+                        fetchRangeData(days[0]);
+                    }
+
+                    console.log('Available days:', days);
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        }
+
+        testGetDays(); // 初始化調用以獲取可用日期
+
     </script>
 </body>
 

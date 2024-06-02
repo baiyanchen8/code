@@ -19,7 +19,7 @@ while True:
         # 發送POST請求
         try:
             response = requests.post(
-                'http://192.168.1.213:5000/post_camera_frame', json=data)
+                'http://localhost:5000/post_camera_frame', json=data)
             if response.status_code == 200:
                 print("err sent successfully")
             else:
@@ -54,7 +54,7 @@ while True:
     # 發送POST請求
     try:
         response = requests.post(
-            'http://192.168.1.213:5000/post_camera_frame', json=data)
+            'http://localhost:5000/post_camera_frame', json=data)
         if response.status_code == 200:
             print("Image sent successfully")
         else:
