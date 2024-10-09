@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>日期選擇下拉式選單</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .select {
+            margin: 20px;
+        }
+
+        .date {
+            position: relative;
+            display: inline-block;
+        }
+
+        .date-selector {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .date-selector option {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .date-selector option:hover {
+            background-color: #f1f1f1;
+        }
+
+        .date-btn {
+            width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .date-btn::after {
+            content: '\25BC'; /* Unicode for down arrow */
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="select">
+    <div class="date">
+        <button class="date-btn" onclick="toggleDropdown()">選擇日期</button>
+        <select class="date-selector" size="4" onclick="selectDate(event)">
+            <option value="day">2024 年 6 月 5 日</option>
+            <option value="week">2024 年 6 月 4 日</option>
+            <option value="month">2024 年 6 月 3 日</option>
+            <option value="year">2024 年 6 月 2 日</option>
+        </select>
+    </div>
+</div>
+
+<script>
+    function toggleDropdown() {
+        const selector = document.querySelector('.date-selector');
+        selector.style.display = selector.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function selectDate(event) {
+        console.log("fff")
+        const btn = document.querySelector('.date-btn');
+        btn.textContent = event.target.textContent;
+        toggleDropdown();
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.date-btn')) {
+            const dropdowns = document.querySelectorAll('.date-selector');
+            dropdowns.forEach(dropdown => {
+                if (dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+Highcharts.chart('realtime', {
+    chart: {
+        width: 400,
+        height: 250,
+        style: {
+            borderRadius: '10px'
+        },
+        margin: [70, 40, 30, 60]
+    },
+    credits: {
+        enabled: false
+    },
+    title: {
+        text: '當前用電情況',
+        style: {
+            fontSize: '18px'
+        },
+        x: -95,
+        y: 25
+    },
+    xAxis: {
+        type: 'datetime',
+        dateTimeLabelFormats: {
+            day: '%Y-%m-%d',
+            week: '%Y-%m-%d',
+            month: '%Y-%m',
+            year: '%Y'
+        },
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+        title: {
+            text: null
+        }
+    },
+    series: [{
+        name: 'Temperature',
+        data: []
+    }],
+    legend: {
+        enabled: false
+    }
+});
+
+Highcharts.chart('plug', {
+    chart: {
+        type: 'bar',
+        width: 400,
+        height: 250,
+        style: {
+            borderRadius: '10px'
+        },
+        margin: [60, 50, 70, 80]
+    },
+    credits: {
+        enabled: false
+    },
+    title: {
+        text: '用電量排名',
+        style: {
+            fontSize: '18px'
+        },
+        x: -100,
+        y: 25
+    },
+    xAxis: {
+        categories: ['插座 A', '插座 B', '插座 C']
+    },
+    yAxis: {
+        title: {
+            text: '度電'
+        }
+    },
+    series: [{
+        name: '用電量',
+        data: [5, 3, 2],
+        pointWidth: 10,
+        showInLegend: false
+    }]
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const temperatureData = [
+        { date: '2024-06-01', temperature: 25 },
+        { date: '2024-06-02', temperature: 27 },
+        { date: '2024-06-03', temperature: 23 },
+        { date: '2024-06-04', temperature: 26 },
+        { date: '2024-06-05', temperature: 28 },
+        { date: '2024-06-06', temperature: 25 },
+        { date: '2024-06-07', temperature: 27 },
+        { date: '2024-06-08', temperature: 23 },
+        { date: '2024-06-01', temperature: 25 },
+        { date: '2024-06-02', temperature: 27 },
+        { date: '2024-06-03', temperature: 23 },
+        { date: '2024-06-04', temperature: 26 },
+        { date: '2024-06-05', temperature: 28 },
+        { date: '2024-06-06', temperature: 25 },
+        { date: '2024-06-07', temperature: 27 },
+        { date: '2024-06-08', temperature: 23 },
+        
+    ];
+
+    const dates = temperatureData.map(entry => entry.date);
+    const temperatures = temperatureData.map(entry => entry.temperature);
+
+    Highcharts.chart('trend', {
+        chart: {
+            type: 'column',
+            width: 400,
+            height: 250,
+            style: {
+                borderRadius: '10px'
+            },
+            margin: [70, 40, 30, 60]
+        },
+        credits: {
+            enabled: false
+        },
+        title: {
+            text: '用電量趨勢',
+            style: {
+                fontSize: '18px'
+            },
+            x: -100,
+            y: 25
+        },
+        xAxis: {
+            categories: dates,
+            title: {
+                text: null
+            },
+            labels: {
+                enabled: false
+            }
+        },
+        yAxis: {
+            title: {
+                text: null
+            }
+        },
+        series: [{
+            name: '氣溫',
+            data: temperatures
+        }],
+        legend: {
+            enabled: false
+        }
+    });
+});
+
+
+
+
+
+
+
+
+// my code
+
+// setInterval(fetchRangeData, 3000);
+
+function selectrange() {
+    var selectedDate = document.getElementById("dayweek").value;
+    var url = `/getrange`;
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ date: selectedDate })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            console.error('錯誤：', data.error);
+        } else {
+            // 在這裡更新範圍圖表或進行其他操作
+            console.log(data);
+            
+        }
+    })
+    .catch(error => console.error('錯誤：', error));
+}
+
+
+function getnew(){
+    var url='/getnowdata';
+    fetch(url,{
+        method:'GET',
+    }).then(response=>response.json())
+    .then(data=>{
+        console.log(data);
+
+    }).catch(
+        error=>alert(error)
+    )
+
+}
+
+
+function get_device() {
+    var url = `/get_device`;
+
+    fetch(url, {
+        method: 'POST',
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            console.error('錯誤：', data.error);
+        } else {
+            var select = document.getElementById("yyds");
+            // 清空現有選項
+            select.innerHTML = '<option value="">選擇裝置</option>';
+
+            // 添加新選項
+            data.forEach(device => {
+                var option = document.createElement("option");
+                option.value = device;
+                option.textContent = device;
+                select.appendChild(option);
+            });
+
+            console.log('成功取得裝置：', data);
+        }
+    })
+    .catch(error => console.error('錯誤：', error));
+}
+
+function getpay() {
+    var url = `/getpay`;
+
+    fetch(url, {
+        method: 'POST',
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            console.error('錯誤：', data.error);
+        } else {
+
+            console.log('成功取得裝置：', data);
+             // 將資料轉換為浮點數並保留小數點後兩位
+             var paymentAmount = parseFloat(data).toFixed(2);
+            
+             var paymentElement = document.getElementById("charge");
+             paymentElement.innerHTML = paymentAmount;
+        }
+    })
+    .catch(error => console.error('錯誤：', error));
+}
+
+
+
+window.onload = function() {
+    get_device();
+}
+
+
+setInterval(getpay, 5000);
+setInterval(getnew, 5000);

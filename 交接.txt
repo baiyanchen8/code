@@ -1,0 +1,84 @@
+-˙7-11
+後台VM網址：https://vc.idc.tcrc.edu.tw/ui
+帳號：idc\gishm
+密碼：gis@2k25Hm
+
+帳號：root
+密碼：3sSUmode@7-11
+
+注意!!要切換成大寫再進入VM，不然輸入法會出錯，不確定輸入正確與否也可以用右鍵顯示密碼
+
+出勤紀錄表
+https://psf.nchu.edu.tw/punch/index.jsp
+一個月要填一次，內容 系統維護
+
+----------------VM修改密碼網址----------------------
+https://dfm.idc.tcrc.edu.tw/RDWeb/Pages/en-US/password.aspx
+當vm出現更換密碼的警示時記得去更改，不然後續將無法登入
+還有系統無法使用等VM相關問題找 資訊科學大樓2F 213室 呂仲聖 工程師
+
+--------------------------------------
+
+後台管理：
+3s：http://3s.nchu.edu.tw/admin/login
+國小普及化：http://jpopsports.nchu.edu.tw/admin/games
+國中普及化：http://spopsports.nchu.edu.tw/admin/games
+3s系統競賽總管理：http://3s.nchu.edu.tw/admin/games
+
+忠哥	系統問題找他
+陳進發	有需求的老師
+詠章	計畫主持人
+炳昆	薪水相關
+
+
+----------------mysql----------------------
+https://ithelp.ithome.com.tw/articles/10216290	-->語法參考
+
+資料庫 刪資料
+mysql
+show databases;
+use databases;
+show tables;
+select * from games;
+select * from games where id=3;
+select * from users where game_id=3;
+delete from users where id=1121;(刪除單一筆users資料)
+delete from users;(刪除全部users資料)
+
+--------------------------------------
+var/www/html/
+	GM ...... 3s
+	ES ...... 國小普及化
+	JHS ..... 國中普及化
+
+
+/var/www/html/GM/resources/view		外表呈現相關; html,css相關
+/var/www/html/GM/resources/lang		文字
+/var/www/html/GM/app			功能相關
+/var/www/html/GM/app/Http/routes.php	重要檔案
+
+
+
+由view/backend/ ->  route.php  ->  xxController.php  ->  /app/Services
+這樣尋找檔案的過程來修改
+有需要修改database再去mysql改
+
+系統EMAIL
+3s.sportservice@gmail.com
+z3AvMbs4
+app password:cfzdmfhjhnfxiunt(google提供給程式碼使用的專用信箱密碼)
+app passwd  :jedppygamyssahci
+資料庫table內容:
+大部分的資料都儲存在game_manager的table中
+admins=管理員資料
+bulletin_attach=附件(公告的附件)
+bulletins=公告內容
+galleries=賽中作業活動花絮
+games=競賽內容(id,名稱,選手要填的資料,報名比賽期間)
+item_arrange =大概是分數吧
+item_param=比甚麼球類(賽前作業比賽項目管理)
+item=競賽組別(男子XX,女子XX)
+
+額外工具：因系統檔案過多，在var/www/html中有另外建立一個search.py
+當需要查找某個文字時可以使用search.py搜尋所有資料夾的文件中含有特定字串的檔案有哪些以及他們的位置
+例如query為"競賽規則"，程式就會搜尋所有含有"競賽規則"的檔案
