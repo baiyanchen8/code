@@ -1,0 +1,108 @@
+html {
+    align-items: center;
+    background-color: #f7eee4;
+    color: #c5c8c6;
+    display: flex;
+    font: 22px/1 "Inconsolata", monospace;
+    height: 100%;
+    justify-content: center;
+  }
+  
+  body {
+    background-color: #1d1f21;
+    border-radius: 2px;
+    box-shadow: 1px 1px 6px #1d1f2187;
+    color: #c5c8c6;
+    display: flex;
+    flex-direction: column;
+    min-height: 48ch;
+    min-width: 60vw;
+    padding: 2em;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    column-gap: 2em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 1em 0;
+  }
+
+  ul:nth-child(5n + 1) li:first-child {
+    color: #a54242;
+  }
+
+  ul:nth-child(5n + 2) li:first-child {
+    color: #de935f;
+  }
+  
+  ul:nth-child(5n + 3) li:first-child {
+    color: #f0c674;
+  }
+  
+  ul:nth-child(5n + 4) li:first-child {
+    color: #8c9440;
+  }
+
+  ul:nth-child(5n + 5) li:first-child {
+    color: #85678f;
+  }
+
+  li:first-child {
+    font-weight: bold;
+  }
+
+  li:last-child {
+    margin: 0 0 1em;
+  }
+  li{
+    padding: 3px;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:focus,
+  a:hover {
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+  }
+  
+  p span {
+    color: #b5bd68;
+  }
+  
+  #cursor {
+    background-color: #b5bd68;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 49% { opacity: 0; }
+    50%, 100% { opacity: 1; }
+  }
+  
+  #terminal-input {
+    background-color: transparent;
+    border: none;
+    color: #b5bd68;
+    font: 16.5px/1 "Inconsolata", monospace;
+    outline: none;
+    caret-color: #b5bd68;
+    width: 70%;
+    /* padding-left: 0.5em; */
+    /* animation: blink 1s infinite; 光標閃爍效果 */
+  }
+  
+  #terminal-input::placeholder {
+    color: #8c9440;
+    opacity: 0.7;
+  }

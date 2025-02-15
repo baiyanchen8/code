@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "New Tab 美化擴展",
+  "version": "1.0",
+  "description": "美化新分頁，並提供常用網頁選單和小工具。",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "search",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "assets/icon.ico",
+    "128": "assets/icon.ico"
+  }
+}
