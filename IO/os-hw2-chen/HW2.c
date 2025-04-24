@@ -24,18 +24,33 @@ void print_elapsed(struct timespec start, struct timespec end, const char* label
 
 // 建立 input.txt 測試檔案
 void generate_input_file() {
-    if (access("input.txt", F_OK) == -1) {
-        char choice;
-        printf("⚙️ 找不到測試檔案 input.txt，是否建立 10MB 測試檔？(y/n)：");
-        scanf(" %c", &choice);
-        if (choice == 'y' || choice == 'Y') {
-            printf("📦 正在產生 input.txt...\n");
-            printf("use cmd :\'\033[1;33m dd if=/dev/urandom of=input.txt bs=1M count=10 status=none \033[0m\'\n");
-            system("dd if=/dev/urandom of=input.txt bs=1M count=10 status=none");
-            printf("✅ 檔案產生完成。\n");
+    // 建立 input.txt，建立
+    if (1) {
+        if (remove("input.txt") == 0) {
+            printf("🗑️ 成功刪除 input.txt 檔案。\n");
         } else {
-            printf("❌ 未建立檔案，請手動準備 input.txt。\n");
-            exit(1);
+            printf("❌ 刪除 input.txt 失敗，可能檔案不存在或權限不足。\n");
+        }
+        printf("是否建立測試檔？(size,MB)：");
+        int size1;
+        scanf(" %d", &size1);
+        if (size1 <= 0) {
+            size1 = 10;
+        }
+        if (size1 > 0) {
+            printf("📦 正在產生 input.txt...\n");
+            printf("use cmd :'\033[1;33m dd if=/dev/urandom of=input.txt bs=1M count=%d status=none \033[0m'\n", size1);
+            
+            // 建立命令字串
+            char cmd[256];
+            snprintf(cmd, sizeof(cmd), "dd if=/dev/urandom of=input.txt bs=1M count=%d status=none", size1);
+            
+            int ret = system(cmd);
+            if (ret != 0) {
+                printf("❌ 無法建立測試檔案，請確認系統支援 dd 指令。\n");
+                return 1;
+            }
+            printf("✅ 檔案產生完成。\n");
         }
     }
 }
@@ -61,6 +76,8 @@ void blocking_io_copy(const char* input, const char* output) {
     close(in_fd);
     close(out_fd);
 }
+
+
 // ---------- Matrix Multiplication ----------
 int** alloc_matrix(int N) {
     int **mat = malloc(N * sizeof(int*));
@@ -90,56 +107,6 @@ void free_matrix(int** mat, int N) {
         free(mat[i]);
     free(mat);
 }
-// ---------- Blocking I/O  +Matrix Multiplication----------
-void blocking_io_copy_matrix_multiplication(const char* input, const char* output) {
-    int in_fd = open(input, O_RDONLY);
-    int out_fd = open(output, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-    off_t file_size = lseek(in_fd, 0, SEEK_END);
-    lseek(in_fd, 0, SEEK_SET); // 回到開頭
-    char* buffer = malloc(file_size);
-
-    ssize_t total_read = 0;
-    while (total_read < file_size) {
-        ssize_t bytes = read(in_fd, buffer + total_read, file_size - total_read);
-        if (bytes < 0) {
-            perror("❌ 讀取檔案失敗");
-            free(buffer);
-            close(in_fd);
-            close(out_fd);
-            return;
-        }
-        total_read += bytes;
-    }
-
-    // ⚙️ 執行矩陣乘法運算
-    printf("⚙️ 執行矩陣乘法運算...\n");
-    int **A = alloc_matrix(MATRIX_SIZE);
-    int **B = alloc_matrix(MATRIX_SIZE);
-    int **C = alloc_matrix(MATRIX_SIZE);
-    fill_matrix(A, MATRIX_SIZE);
-    fill_matrix(B, MATRIX_SIZE);
-    multiply_matrix(A, B, C, MATRIX_SIZE);
-    free_matrix(A, MATRIX_SIZE);
-    free_matrix(B, MATRIX_SIZE);
-    free_matrix(C, MATRIX_SIZE);
-
-    // ✍️ 寫出整個檔案
-    ssize_t total_written = 0;
-    while (total_written < file_size) {
-        ssize_t bytes = write(out_fd, buffer + total_written, file_size - total_written);
-        if (bytes < 0) {
-            perror("❌ 寫入檔案失敗");
-            break;
-        }
-        total_written += bytes;
-    }
-
-    free(buffer);
-    close(in_fd);
-    close(out_fd);
-}
-
-
 off_t get_file_size(const char* filename) {
     struct stat st;
     if (stat(filename, &st) != 0) {
@@ -409,7 +376,18 @@ int main() {
             case 3:
                 printf("🔧 測試模式：Blocking I/O + Matrix\n");
                 clock_gettime(CLOCK_MONOTONIC, &start);
-                blocking_io_copy_matrix_multiplication("input.txt", "output_blocking.txt");
+                blocking_io_copy("input.txt", "output_blocking.txt");
+
+                // 模擬矩陣運算
+                printf("⚙️ 執行矩陣運算...\n");
+                int **A = alloc_matrix(MATRIX_SIZE), **B = alloc_matrix(MATRIX_SIZE), **C = alloc_matrix(MATRIX_SIZE);
+                fill_matrix(A, MATRIX_SIZE);
+                fill_matrix(B, MATRIX_SIZE);
+                multiply_matrix(A, B, C, MATRIX_SIZE);
+                free_matrix(A, MATRIX_SIZE);
+                free_matrix(B, MATRIX_SIZE);
+                free_matrix(C, MATRIX_SIZE);
+
                 clock_gettime(CLOCK_MONOTONIC, &end);
                 print_elapsed(start, end, "Blocking + Matrix");
                 break;
