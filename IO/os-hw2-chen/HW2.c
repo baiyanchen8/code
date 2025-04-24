@@ -59,7 +59,7 @@ void generate_input_file() {
 void clear_cache() {
     printf("📦 清除 Page Cache...\n");
     printf("use cmd :\'\033[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null\033[0m\'\n");
-    system("sync; echo 3 | sudo tee /proc/sys/vm/*  *//drop_caches > /dev/null");
+    system("sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null");
 }
 
 // ---------- Blocking I/O ----------
@@ -273,14 +273,29 @@ void aio_with_matrix_concurrency(const char* input, const char* output,int concu
         free_matrix(A, MATRIX_SIZE);
         free_matrix(B, MATRIX_SIZE);
         free_matrix(C, MATRIX_SIZE);
-
+        struct aiocb write_cb[actual_tasks];
         // 等待 AIO 完成
         for (int i = 0; i < actual_tasks; ++i) {
             while (aio_error(&cbs[i]) == EINPROGRESS);
-            ssize_t ret = aio_return(&cbs[i]);
-            if (ret > 0) {
-                write(out_fd, buffers[i], ret);
+            int bytes_read = aio_return(&cbs[i]);
+            if (bytes_read <= 0) {
+                fprintf(stderr, "aio_read failed or EOF\n");
+                return;
             }
+
+            memset(&write_cb[i], 0, sizeof(struct aiocb));
+            write_cb[i].aio_fildes = out_fd;
+            write_cb[i].aio_buf = buffers[i];
+            write_cb[i].aio_nbytes = bytes_read;
+            write_cb[i].aio_offset = cbs[i].aio_offset;
+
+            if (aio_write(&write_cb[i]) < 0) {
+                perror("aio_write");
+                return;
+            }
+        }
+        for (int i = 0; i < actual_tasks; ++i) {
+            while (aio_error(&write_cb[i]) == EINPROGRESS);
         }
     }
 
@@ -292,43 +307,7 @@ void aio_with_matrix_concurrency(const char* input, const char* output,int concu
     close(fd);
     close(out_fd);
 }
-//--------- AIO + Matrix Multiplication ----------
-void aio_with_matrix(const char* input, const char* output) {
-    int fd = open(input, O_RDONLY);
-    int out_fd = open(output, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-    char* buffer = malloc(BUF_SIZE);
 
-    struct aiocb cb;
-    memset(&cb, 0, sizeof(cb));
-    cb.aio_fildes = fd;
-    cb.aio_buf = buffer;
-    cb.aio_nbytes = BUF_SIZE;
-    cb.aio_offset = 0;
-
-    aio_read(&cb);
-
-    // 計算矩陣乘法
-    printf("⚙️ 執行矩陣運算...\n");
-    int **A = alloc_matrix(MATRIX_SIZE), **B = alloc_matrix(MATRIX_SIZE), **C = alloc_matrix(MATRIX_SIZE);
-    fill_matrix(A, MATRIX_SIZE);
-    fill_matrix(B, MATRIX_SIZE);
-    multiply_matrix(A, B, C, MATRIX_SIZE);
-    free_matrix(A, MATRIX_SIZE);
-    free_matrix(B, MATRIX_SIZE);
-    free_matrix(C, MATRIX_SIZE);
-
-    // Polling 等待 AIO 完成
-    while (aio_error(&cb) == EINPROGRESS) {}
-
-    ssize_t ret = aio_return(&cb);
-    if (ret > 0) {
-        write(out_fd, buffer, ret);
-    }
-
-    close(fd);
-    close(out_fd);
-    free(buffer);
-} 
 // ---------- 主程式 ----------
 int main() {
     generate_input_file();
@@ -340,7 +319,6 @@ int main() {
         printf(" 2: Asynchronous I/O (AIO)\n");
         printf(" 3: Blocking I/O + Matrix 計算\n");
         printf(" 4: AIO (Polling+concurrency) + Matrix 計算\n");
-        printf(" 5: AIO (Polling) + Matrix 計算\n");
         printf(" 0: 離開程式\n");
         printf("請選擇模式：");
         scanf("%d", &choice);
@@ -395,16 +373,9 @@ int main() {
                 int concurrency;
                 printf("請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：");
                 scanf("%d", &concurrency);
-                printf("🔧 測試模式：AIO(concurrency) + Matrix 運算\n");
+                printf("🔧 測試模式：AIO(concurrency%d) + Matrix 運算\n",concurrency);
                 clock_gettime(CLOCK_MONOTONIC, &start);
                 aio_with_matrix_concurrency("input.txt", "output_aio_calc.txt",concurrency);
-                clock_gettime(CLOCK_MONOTONIC, &end);
-                print_elapsed(start, end, "AIO + Matrix");
-                break;
-            case 5:
-                printf("🔧 測試模式：AIO + Matrix 運算\n");
-                clock_gettime(CLOCK_MONOTONIC, &start);
-                aio_with_matrix("input.txt", "output_aio_calc.txt");
                 clock_gettime(CLOCK_MONOTONIC, &end);
                 print_elapsed(start, end, "AIO + Matrix");
                 break;

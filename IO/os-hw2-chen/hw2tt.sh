@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 輸出標題行
-echo "Size (MB), Time1 (sec), Time2 (sec), Time3 (sec), Time4 (sec), Time5 (sec), Time6 (sec)" > output.csv
+echo "Size (MB), 3,4-4,4-8,4-16,4-32" > output.csv
 
 # 用於收集每個 size 對應的時間數據
 size=""
@@ -13,7 +13,7 @@ grep -oP '\d+MB|\[\w+\s*\+\s*Matrix\]\s*執行時間：\d+\.\d{6}' hw2.log | whi
         # 如果是 size 行，將數字提取出來
         if [ ${#times[@]} -gt 0 ]; then
             # 如果有收集到時間，將結果寫入 CSV 文件
-            echo "${size}, ${times[0]}, ${times[1]}, ${times[2]}, ${times[3]}, ${times[4]}, ${times[5]}" >> output.csv
+            echo "${size}, ${times[0]}, ${times[1]}, ${times[2]}, ${times[3]}, ${times[4]}, ${times[5]}" >> hw2.csv
             # 清空時間數組
             times=()
         fi
@@ -26,5 +26,5 @@ done
 
 # 確保最後一行也寫入
 if [ ${#times[@]} -gt 0 ]; then
-    echo "${size}, ${times[0]}, ${times[1]}, ${times[2]}, ${times[3]}, ${times[4]}, ${times[5]}" >> output.csv
+    echo "${size}, ${times[0]}, ${times[1]}, ${times[2]}, ${times[3]}, ${times[4]}, ${times[5]}" >> hw2.csv
 fi

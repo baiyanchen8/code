@@ -1,7 +1,7 @@
 #!/bin/bash
 
 input_file="hw1.log"
-output_file="hw1.csv"
+output_file="hw11.csv"
 
 echo "MB,Blocking I/O,Non-Blocking I/O,AIO-4,AIO-8,AIO-16,AIO-32" > "$output_file"
 

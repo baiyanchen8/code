@@ -120,7 +120,8 @@ void aio_io_copy(const char* src, const char* dst, int concurrent) {
             remaining_buffers -= read_count;
         }
 
-        // 等待所有 AIO 完成
+        struct aiocb write_cb[actual_tasks];
+        // 等待 AIO 完成
         for (int i = 0; i < actual_tasks; ++i) {
             while (aio_error(&cbs[i]) == EINPROGRESS);
             int bytes_read = aio_return(&cbs[i]);
@@ -129,26 +130,23 @@ void aio_io_copy(const char* src, const char* dst, int concurrent) {
                 return;
             }
 
-            struct aiocb write_cb;
-            memset(&write_cb, 0, sizeof(struct aiocb));
-            write_cb.aio_fildes = out_fd;
-            write_cb.aio_buf = buffers[i];
-            write_cb.aio_nbytes = bytes_read;
-            write_cb.aio_offset = cbs[i].aio_offset;
+            memset(&write_cb[i], 0, sizeof(struct aiocb));
+            write_cb[i].aio_fildes = out_fd;
+            write_cb[i].aio_buf = buffers[i];
+            write_cb[i].aio_nbytes = bytes_read;
+            write_cb[i].aio_offset = cbs[i].aio_offset;
 
-            if (aio_write(&write_cb) < 0) {
+            if (aio_write(&write_cb[i]) < 0) {
                 perror("aio_write");
                 return;
             }
-
-            while (aio_error(&write_cb) == EINPROGRESS);
-            int bytes_written = aio_return(&write_cb);
-            if (bytes_written != bytes_read) {
-                fprintf(stderr, "aio_write incomplete\n");
-                return;
-            }
         }
+        for (int i = 0; i < actual_tasks; ++i) {
+            while (aio_error(&write_cb[i]) == EINPROGRESS);
+        }
+   
     }
+
 
     for (int i = 0; i < concurrent; ++i) {
         free(buffers[i]);

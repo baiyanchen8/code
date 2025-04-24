@@ -13,7 +13,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=10 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.031789 秒
+[Blocking I/O] 執行時間： 0.030634 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -24,7 +24,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.038838 秒
+[Non-Blocking I/O] 執行時間： 0.016585 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -35,7 +35,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.039447 秒
+[AIO（並發數 4）] 執行時間： 0.024086 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -46,7 +46,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.026130 秒
+[AIO（並發數 8）] 執行時間： 0.025495 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -57,7 +57,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.019394 秒
+[AIO（並發數 16）] 執行時間： 0.016493 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -68,7 +68,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.021707 秒
+[AIO（並發數 32）] 執行時間： 0.022808 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -91,7 +91,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=20 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.043065 秒
+[Blocking I/O] 執行時間： 0.047694 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -102,7 +102,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.049477 秒
+[Non-Blocking I/O] 執行時間： 0.042833 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -113,7 +113,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.037930 秒
+[AIO（並發數 4）] 執行時間： 0.033765 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -124,7 +124,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.029925 秒
+[AIO（並發數 8）] 執行時間： 0.033685 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -135,7 +135,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.041690 秒
+[AIO（並發數 16）] 執行時間： 0.033305 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -146,7 +146,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.139811 秒
+[AIO（並發數 32）] 執行時間： 0.031090 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -169,7 +169,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=30 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.044493 秒
+[Blocking I/O] 執行時間： 0.059258 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -180,7 +180,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.047437 秒
+[Non-Blocking I/O] 執行時間： 0.090865 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -191,7 +191,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.052196 秒
+[AIO（並發數 4）] 執行時間： 0.045351 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -202,7 +202,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.047817 秒
+[AIO（並發數 8）] 執行時間： 0.074945 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -213,7 +213,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.063292 秒
+[AIO（並發數 16）] 執行時間： 0.065989 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -224,7 +224,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.074845 秒
+[AIO（並發數 32）] 執行時間： 0.067565 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -247,7 +247,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=40 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.094059 秒
+[Blocking I/O] 執行時間： 0.101812 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -258,7 +258,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.083419 秒
+[Non-Blocking I/O] 執行時間： 0.113935 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -269,7 +269,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.099354 秒
+[AIO（並發數 4）] 執行時間： 0.089303 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -280,7 +280,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.105241 秒
+[AIO（並發數 8）] 執行時間： 0.129086 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -291,7 +291,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.081823 秒
+[AIO（並發數 16）] 執行時間： 0.108020 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -302,7 +302,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.087603 秒
+[AIO（並發數 32）] 執行時間： 0.091002 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -325,7 +325,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=50 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.116808 秒
+[Blocking I/O] 執行時間： 0.097491 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -336,7 +336,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.134677 秒
+[Non-Blocking I/O] 執行時間： 0.152204 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -347,7 +347,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.134235 秒
+[AIO（並發數 4）] 執行時間： 0.105988 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -358,7 +358,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.115806 秒
+[AIO（並發數 8）] 執行時間： 0.121341 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -369,7 +369,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.113989 秒
+[AIO（並發數 16）] 執行時間： 0.094118 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -380,7 +380,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.121467 秒
+[AIO（並發數 32）] 執行時間： 0.116047 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -403,7 +403,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=60 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.129642 秒
+[Blocking I/O] 執行時間： 0.159594 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -414,7 +414,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.163221 秒
+[Non-Blocking I/O] 執行時間： 0.136174 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -425,7 +425,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.147187 秒
+[AIO（並發數 4）] 執行時間： 0.183642 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -436,7 +436,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.139412 秒
+[AIO（並發數 8）] 執行時間： 0.122897 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -447,7 +447,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.142337 秒
+[AIO（並發數 16）] 執行時間： 0.130953 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -458,7 +458,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.148839 秒
+[AIO（並發數 32）] 執行時間： 0.144257 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -481,7 +481,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=70 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.223732 秒
+[Blocking I/O] 執行時間： 0.142742 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -492,7 +492,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.172204 秒
+[Non-Blocking I/O] 執行時間： 0.152148 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -503,7 +503,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.160657 秒
+[AIO（並發數 4）] 執行時間： 0.144028 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -514,7 +514,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.190243 秒
+[AIO（並發數 8）] 執行時間： 0.149158 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -525,7 +525,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.160128 秒
+[AIO（並發數 16）] 執行時間： 0.167978 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -536,7 +536,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.169518 秒
+[AIO（並發數 32）] 執行時間： 0.196544 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -559,7 +559,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=80 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.229217 秒
+[Blocking I/O] 執行時間： 0.174410 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -570,7 +570,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.339340 秒
+[Non-Blocking I/O] 執行時間： 0.174450 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -581,7 +581,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.270948 秒
+[AIO（並發數 4）] 執行時間： 0.168750 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -592,7 +592,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.303777 秒
+[AIO（並發數 8）] 執行時間： 0.197166 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -603,7 +603,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.296946 秒
+[AIO（並發數 16）] 執行時間： 0.405683 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -614,7 +614,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.318363 秒
+[AIO（並發數 32）] 執行時間： 0.321475 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -637,7 +637,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=90 status=none [0
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.347934 秒
+[Blocking I/O] 執行時間： 0.382713 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -648,7 +648,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.408740 秒
+[Non-Blocking I/O] 執行時間： 0.375438 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -659,7 +659,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.378424 秒
+[AIO（並發數 4）] 執行時間： 0.350415 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -670,7 +670,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.363267 秒
+[AIO（並發數 8）] 執行時間： 0.407557 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -681,7 +681,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.352227 秒
+[AIO（並發數 16）] 執行時間： 0.392262 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -692,7 +692,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.347952 秒
+[AIO（並發數 32）] 執行時間： 0.383658 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -715,7 +715,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=100 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.397618 秒
+[Blocking I/O] 執行時間： 0.337326 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -726,7 +726,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.423682 秒
+[Non-Blocking I/O] 執行時間： 0.397815 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -737,7 +737,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.404658 秒
+[AIO（並發數 4）] 執行時間： 0.441951 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -748,7 +748,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.407235 秒
+[AIO（並發數 8）] 執行時間： 0.417645 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -759,7 +759,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.375632 秒
+[AIO（並發數 16）] 執行時間： 0.434251 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -770,7 +770,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.446034 秒
+[AIO（並發數 32）] 執行時間： 0.400104 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -793,7 +793,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=200 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 0.734049 秒
+[Blocking I/O] 執行時間： 0.941876 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -804,7 +804,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 0.850897 秒
+[Non-Blocking I/O] 執行時間： 1.001376 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -815,7 +815,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 0.829827 秒
+[AIO（並發數 4）] 執行時間： 0.817203 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -826,7 +826,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 0.816972 秒
+[AIO（並發數 8）] 執行時間： 0.991915 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -837,7 +837,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 0.808442 秒
+[AIO（並發數 16）] 執行時間： 1.234361 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -848,7 +848,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 0.793970 秒
+[AIO（並發數 32）] 執行時間： 0.899062 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -871,7 +871,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=300 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 1.244436 秒
+[Blocking I/O] 執行時間： 0.994639 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -882,7 +882,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 1.243888 秒
+[Non-Blocking I/O] 執行時間： 0.667859 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -893,7 +893,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 1.330114 秒
+[AIO（並發數 4）] 執行時間： 0.688394 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -904,7 +904,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 1.184206 秒
+[AIO（並發數 8）] 執行時間： 0.661671 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -915,7 +915,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 1.138157 秒
+[AIO（並發數 16）] 執行時間： 0.658988 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -926,7 +926,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 1.015165 秒
+[AIO（並發數 32）] 執行時間： 0.665391 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -949,7 +949,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=400 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 1.519244 秒
+[Blocking I/O] 執行時間： 1.376169 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -960,7 +960,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 1.606432 秒
+[Non-Blocking I/O] 執行時間： 1.631396 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -971,7 +971,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 1.326595 秒
+[AIO（並發數 4）] 執行時間： 1.605285 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -982,7 +982,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 1.653897 秒
+[AIO（並發數 8）] 執行時間： 1.496341 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -993,7 +993,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 1.644032 秒
+[AIO（並發數 16）] 執行時間： 1.559772 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1004,7 +1004,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 1.597474 秒
+[AIO（並發數 32）] 執行時間： 1.370858 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1027,7 +1027,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=500 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 1.850242 秒
+[Blocking I/O] 執行時間： 1.928893 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1038,7 +1038,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 2.377281 秒
+[Non-Blocking I/O] 執行時間： 2.068827 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1049,7 +1049,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 2.120603 秒
+[AIO（並發數 4）] 執行時間： 1.709107 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1060,7 +1060,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 2.049183 秒
+[AIO（並發數 8）] 執行時間： 2.027781 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1071,7 +1071,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 2.062165 秒
+[AIO（並發數 16）] 執行時間： 1.989176 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1082,7 +1082,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 2.147981 秒
+[AIO（並發數 32）] 執行時間： 2.022660 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1105,7 +1105,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=600 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 2.393930 秒
+[Blocking I/O] 執行時間： 2.262294 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1116,7 +1116,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 2.415239 秒
+[Non-Blocking I/O] 執行時間： 2.452635 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1127,7 +1127,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 2.260091 秒
+[AIO（並發數 4）] 執行時間： 2.319614 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1138,7 +1138,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 2.323808 秒
+[AIO（並發數 8）] 執行時間： 2.358652 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1149,7 +1149,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 2.345727 秒
+[AIO（並發數 16）] 執行時間： 2.349001 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1160,7 +1160,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 2.377313 秒
+[AIO（並發數 32）] 執行時間： 2.338815 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1183,7 +1183,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=700 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 3.067922 秒
+[Blocking I/O] 執行時間： 2.841951 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1194,7 +1194,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 2.972512 秒
+[Non-Blocking I/O] 執行時間： 2.703738 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1205,7 +1205,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 2.958284 秒
+[AIO（並發數 4）] 執行時間： 2.692618 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1216,7 +1216,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 2.662749 秒
+[AIO（並發數 8）] 執行時間： 2.707216 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1227,7 +1227,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 3.019464 秒
+[AIO（並發數 16）] 執行時間： 2.779264 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1238,7 +1238,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 3.179905 秒
+[AIO（並發數 32）] 執行時間： 2.696335 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1261,7 +1261,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=800 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 3.724454 秒
+[Blocking I/O] 執行時間： 3.462568 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1272,7 +1272,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 3.517313 秒
+[Non-Blocking I/O] 執行時間： 3.489445 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1283,7 +1283,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 3.149371 秒
+[AIO（並發數 4）] 執行時間： 3.235295 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1294,7 +1294,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 3.048569 秒
+[AIO（並發數 8）] 執行時間： 3.154220 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1305,7 +1305,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 3.136397 秒
+[AIO（並發數 16）] 執行時間： 3.081617 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1316,7 +1316,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 3.162779 秒
+[AIO（並發數 32）] 執行時間： 3.190751 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1339,7 +1339,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=900 status=none [
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 3.862213 秒
+[Blocking I/O] 執行時間： 3.743126 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1350,7 +1350,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 3.855416 秒
+[Non-Blocking I/O] 執行時間： 3.872295 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1361,7 +1361,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 3.445769 秒
+[AIO（並發數 4）] 執行時間： 3.512648 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1372,7 +1372,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 3.419529 秒
+[AIO（並發數 8）] 執行時間： 3.381475 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1383,7 +1383,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 3.527515 秒
+[AIO（並發數 16）] 執行時間： 3.586347 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1394,7 +1394,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 3.481455 秒
+[AIO（並發數 32）] 執行時間： 3.589367 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1417,7 +1417,7 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=1000 status=none 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Blocking I/O
-[Blocking I/O] 執行時間： 4.277780 秒
+[Blocking I/O] 執行時間： 4.068934 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1428,7 +1428,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 🔧 測試模式：Non-Blocking I/O
-[Non-Blocking I/O] 執行時間： 4.335058 秒
+[Non-Blocking I/O] 執行時間： 4.209998 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1439,7 +1439,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（4 並發）
-[AIO（並發數 4）] 執行時間： 4.037812 秒
+[AIO（並發數 4）] 執行時間： 4.076795 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1450,7 +1450,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（8 並發）
-[AIO（並發數 8）] 執行時間： 3.838451 秒
+[AIO（並發數 8）] 執行時間： 3.784439 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1461,7 +1461,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（16 並發）
-[AIO（並發數 16）] 執行時間： 3.925670 秒
+[AIO（並發數 16）] 執行時間： 3.929019 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
@@ -1472,7 +1472,7 @@ use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null 
 📦 清除 Page Cache...
 use cmd :'[1;33m sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null [0m'
 請輸入 AIO 並發數量（1~32）：🔧 測試模式：Asynchronous I/O（32 並發）
-[AIO（並發數 32）] 執行時間： 4.691895 秒
+[AIO（並發數 32）] 執行時間： 3.578956 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O

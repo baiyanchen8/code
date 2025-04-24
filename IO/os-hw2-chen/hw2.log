@@ -9,85 +9,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=10 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.650576 秒
+[Blocking + Matrix] 執行時間：0.644301 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.623615 秒
+concurrency[AIO + Matrix] 執行時間：0.880785 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.597760 秒
+concurrency[AIO + Matrix] 執行時間：0.693397 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.610738 秒
+concurrency[AIO + Matrix] 執行時間：0.696059 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.572586 秒
+concurrency[AIO + Matrix] 執行時間：0.635101 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.571821 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 20MB
@@ -101,85 +82,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=20 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.658612 秒
+[Blocking + Matrix] 執行時間：0.758480 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.651650 秒
+concurrency[AIO + Matrix] 執行時間：0.762389 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.786703 秒
+concurrency[AIO + Matrix] 執行時間：0.651845 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.689273 秒
+concurrency[AIO + Matrix] 執行時間：0.613468 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.662525 秒
+concurrency[AIO + Matrix] 執行時間：0.798504 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.595743 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 30MB
@@ -193,85 +155,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=30 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.660754 秒
+[Blocking + Matrix] 執行時間：0.768467 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.671897 秒
+concurrency[AIO + Matrix] 執行時間：0.700122 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.783452 秒
+concurrency[AIO + Matrix] 執行時間：0.825200 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.633881 秒
+concurrency[AIO + Matrix] 執行時間：0.933508 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.597880 秒
+concurrency[AIO + Matrix] 執行時間：0.817159 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.685839 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 40MB
@@ -285,85 +228,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=40 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.866945 秒
+[Blocking + Matrix] 執行時間：0.748230 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.638289 秒
+concurrency[AIO + Matrix] 執行時間：1.090898 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.730856 秒
+concurrency[AIO + Matrix] 執行時間：0.889087 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.766117 秒
+concurrency[AIO + Matrix] 執行時間：0.853481 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.704787 秒
+concurrency[AIO + Matrix] 執行時間：0.680313 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.564498 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 50MB
@@ -377,85 +301,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=50 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.759777 秒
+[Blocking + Matrix] 執行時間：0.760039 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.713811 秒
+concurrency[AIO + Matrix] 執行時間：0.795757 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.633554 秒
+concurrency[AIO + Matrix] 執行時間：0.738824 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.778206 秒
+concurrency[AIO + Matrix] 執行時間：0.671322 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.637710 秒
+concurrency[AIO + Matrix] 執行時間：0.665758 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.579468 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 60MB
@@ -469,85 +374,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=60 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.739282 秒
+[Blocking + Matrix] 執行時間：0.949770 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.711744 秒
+concurrency[AIO + Matrix] 執行時間：0.853690 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.708866 秒
+concurrency[AIO + Matrix] 執行時間：0.686416 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.667530 秒
+concurrency[AIO + Matrix] 執行時間：0.677012 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.687934 秒
+concurrency[AIO + Matrix] 執行時間：0.681091 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.594043 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 70MB
@@ -561,85 +447,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=70 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.943476 秒
+[Blocking + Matrix] 執行時間：0.923124 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.763690 秒
+concurrency[AIO + Matrix] 執行時間：0.711898 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.703067 秒
+concurrency[AIO + Matrix] 執行時間：0.958817 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.677960 秒
+concurrency[AIO + Matrix] 執行時間：0.847382 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.690967 秒
+concurrency[AIO + Matrix] 執行時間：0.795753 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.565555 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 80MB
@@ -653,85 +520,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=80 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.804894 秒
+[Blocking + Matrix] 執行時間：0.753365 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.740405 秒
+concurrency[AIO + Matrix] 執行時間：0.800013 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.716596 秒
+concurrency[AIO + Matrix] 執行時間：0.741736 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.786579 秒
+concurrency[AIO + Matrix] 執行時間：0.911583 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.708828 秒
+concurrency[AIO + Matrix] 執行時間：0.785985 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.592024 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 90MB
@@ -745,85 +593,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=90 status=none [0
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.854862 秒
+[Blocking + Matrix] 執行時間：0.935183 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.942632 秒
+concurrency[AIO + Matrix] 執行時間：0.872657 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.760965 秒
+concurrency[AIO + Matrix] 執行時間：1.109013 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.755758 秒
+concurrency[AIO + Matrix] 執行時間：1.098340 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.788191 秒
+concurrency[AIO + Matrix] 執行時間：1.124873 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.689525 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 100MB
@@ -837,85 +666,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=100 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：0.913790 秒
+[Blocking + Matrix] 執行時間：0.918294 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.783464 秒
+concurrency[AIO + Matrix] 執行時間：0.806957 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.808302 秒
+concurrency[AIO + Matrix] 執行時間：0.860665 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.768867 秒
+concurrency[AIO + Matrix] 執行時間：0.941433 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.810354 秒
+concurrency[AIO + Matrix] 執行時間：0.921143 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.871098 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 200MB
@@ -929,85 +739,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=200 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：1.240036 秒
+[Blocking + Matrix] 執行時間：1.990919 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.971749 秒
+concurrency[AIO + Matrix] 執行時間：2.092265 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.938464 秒
+concurrency[AIO + Matrix] 執行時間：1.531784 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.000021 秒
+concurrency[AIO + Matrix] 執行時間：0.942311 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：0.923869 秒
+concurrency[AIO + Matrix] 執行時間：1.062435 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.637640 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 300MB
@@ -1021,85 +812,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=300 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：1.371523 秒
+[Blocking + Matrix] 執行時間：1.884222 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.198587 秒
+concurrency[AIO + Matrix] 執行時間：1.373897 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.099857 秒
+concurrency[AIO + Matrix] 執行時間：1.501936 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.117473 秒
+concurrency[AIO + Matrix] 執行時間：1.388934 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.155644 秒
+concurrency[AIO + Matrix] 執行時間：1.610160 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.658093 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 400MB
@@ -1113,85 +885,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=400 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：2.090028 秒
+[Blocking + Matrix] 執行時間：2.320985 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.894621 秒
+concurrency[AIO + Matrix] 執行時間：2.195534 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.617163 秒
+concurrency[AIO + Matrix] 執行時間：1.896402 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.386190 秒
+concurrency[AIO + Matrix] 執行時間：1.765327 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.382255 秒
+concurrency[AIO + Matrix] 執行時間：1.935404 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.605118 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 500MB
@@ -1205,85 +958,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=500 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：1.740295 秒
+[Blocking + Matrix] 執行時間：2.555134 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.346682 秒
+concurrency[AIO + Matrix] 執行時間：2.227105 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.310329 秒
+concurrency[AIO + Matrix] 執行時間：2.126395 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.308540 秒
+concurrency[AIO + Matrix] 執行時間：2.290866 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.371229 秒
+concurrency[AIO + Matrix] 執行時間：2.238054 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.600741 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 600MB
@@ -1297,85 +1031,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=600 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：2.005140 秒
+[Blocking + Matrix] 執行時間：3.054919 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：1.441745 秒
+concurrency[AIO + Matrix] 執行時間：2.214904 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：2.590808 秒
+concurrency[AIO + Matrix] 執行時間：2.548162 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：2.460391 秒
+concurrency[AIO + Matrix] 執行時間：2.504425 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：2.584252 秒
+concurrency[AIO + Matrix] 執行時間：2.547718 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.896136 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 700MB
@@ -1389,85 +1104,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=700 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：3.865271 秒
+[Blocking + Matrix] 執行時間：3.489413 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：2.883608 秒
+concurrency[AIO + Matrix] 執行時間：2.479774 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：2.941341 秒
+concurrency[AIO + Matrix] 執行時間：2.873014 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：2.996501 秒
+concurrency[AIO + Matrix] 執行時間：2.787441 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.194946 秒
+concurrency[AIO + Matrix] 執行時間：2.837885 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.716405 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 800MB
@@ -1481,85 +1177,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=800 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：4.058233 秒
+[Blocking + Matrix] 執行時間：3.905366 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.177264 秒
+concurrency[AIO + Matrix] 執行時間：2.898689 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.526706 秒
+concurrency[AIO + Matrix] 執行時間：3.073246 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.217245 秒
+concurrency[AIO + Matrix] 執行時間：3.294896 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.181957 秒
+concurrency[AIO + Matrix] 執行時間：3.088989 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.655571 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 900MB
@@ -1573,85 +1250,66 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=900 status=none [
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：4.742516 秒
+[Blocking + Matrix] 執行時間：4.133292 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.520354 秒
+concurrency[AIO + Matrix] 執行時間：3.312259 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.841858 秒
+concurrency[AIO + Matrix] 執行時間：3.421975 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.503440 秒
+concurrency[AIO + Matrix] 執行時間：3.317921 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.538330 秒
+concurrency[AIO + Matrix] 執行時間：3.509088 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
- 0: 離開程式
-請選擇模式：📦 清除 Page Cache...
-use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
-⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.568510 秒
-
-========== I/O 模式選單 ==========
- 1: Blocking I/O
- 2: Asynchronous I/O (AIO)
- 3: Blocking I/O + Matrix 計算
- 4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
 1000MB
@@ -1665,84 +1323,138 @@ use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=1000 status=none 
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[Blocking + Matrix] 執行時間：4.573621 秒
+[Blocking + Matrix] 執行時間：5.053845 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：4.078290 秒
+concurrency[AIO + Matrix] 執行時間：3.489946 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：4.230902 秒
+concurrency[AIO + Matrix] 執行時間：3.793770 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：4.079232 秒
+concurrency[AIO + Matrix] 執行時間：3.736698 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
 請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
 ⚙️ 執行矩陣運算...
-concurrency[AIO + Matrix] 執行時間：3.884241 秒
+concurrency[AIO + Matrix] 執行時間：3.822802 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
+ 0: 離開程式
+請選擇模式：結束測試。
+10MB
+🗑️ 成功刪除 input.txt 檔案。
+是否建立測試檔？(size,MB)：📦 正在產生 input.txt...
+use cmd :'[1;33m dd if=/dev/urandom of=input.txt bs=1M count=10 status=none [0m'
+✅ 檔案產生完成。
+
+========== I/O 模式選單 ==========
+ 1: Blocking I/O
+ 2: Asynchronous I/O (AIO)
+ 3: Blocking I/O + Matrix 計算
+ 4: AIO (Polling+concurrency) + Matrix 計算
  0: 離開程式
 請選擇模式：📦 清除 Page Cache...
 use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
-🔧 測試模式：AIO + Matrix 運算
+🔧 測試模式：Blocking I/O + Matrix
 ⚙️ 執行矩陣運算...
-[AIO + Matrix] 執行時間：0.621670 秒
+[Blocking + Matrix] 執行時間：0.699096 秒
 
 ========== I/O 模式選單 ==========
  1: Blocking I/O
  2: Asynchronous I/O (AIO)
  3: Blocking I/O + Matrix 計算
  4: AIO (Polling+concurrency) + Matrix 計算
- 5: AIO (Polling) + Matrix 計算
+ 0: 離開程式
+請選擇模式：📦 清除 Page Cache...
+use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
+請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
+⚙️ 執行矩陣運算...
+concurrency[AIO + Matrix] 執行時間：0.655214 秒
+
+========== I/O 模式選單 ==========
+ 1: Blocking I/O
+ 2: Asynchronous I/O (AIO)
+ 3: Blocking I/O + Matrix 計算
+ 4: AIO (Polling+concurrency) + Matrix 計算
+ 0: 離開程式
+請選擇模式：📦 清除 Page Cache...
+use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
+請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
+⚙️ 執行矩陣運算...
+concurrency[AIO + Matrix] 執行時間：0.695151 秒
+
+========== I/O 模式選單 ==========
+ 1: Blocking I/O
+ 2: Asynchronous I/O (AIO)
+ 3: Blocking I/O + Matrix 計算
+ 4: AIO (Polling+concurrency) + Matrix 計算
+ 0: 離開程式
+請選擇模式：📦 清除 Page Cache...
+use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
+請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
+⚙️ 執行矩陣運算...
+concurrency[AIO + Matrix] 執行時間：0.597642 秒
+
+========== I/O 模式選單 ==========
+ 1: Blocking I/O
+ 2: Asynchronous I/O (AIO)
+ 3: Blocking I/O + Matrix 計算
+ 4: AIO (Polling+concurrency) + Matrix 計算
+ 0: 離開程式
+請選擇模式：📦 清除 Page Cache...
+use cmd :'[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null[0m'
+請輸入 AIO 並發數量（目前範例忽略並發，固定為單一區塊）：🔧 測試模式：AIO(concurrency) + Matrix 運算
+⚙️ 執行矩陣運算...
+concurrency[AIO + Matrix] 執行時間：0.575214 秒
+
+========== I/O 模式選單 ==========
+ 1: Blocking I/O
+ 2: Asynchronous I/O (AIO)
+ 3: Blocking I/O + Matrix 計算
+ 4: AIO (Polling+concurrency) + Matrix 計算
  0: 離開程式
 請選擇模式：結束測試。
