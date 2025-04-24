@@ -163,24 +163,33 @@ int main() {
     char filename[100] = "input.txt";
     struct timespec start, end;
 
-    // 檢查是否有 input.txt，沒有就建立
-    if (access(filename, F_OK) != 0) {
-        printf("⚙️ 找不到測試檔案 input.txt，是否建立 10MB 測試檔？(y/n)：");
-        char choice;
-        scanf(" %c", &choice);
-        if (choice == 'y' || choice == 'Y') {
+    // 建立 input.txt，建立
+    if (1) {
+        if (remove("input.txt") == 0) {
+            printf("🗑️ 成功刪除 input.txt 檔案。\n");
+        } else {
+            printf("❌ 刪除 input.txt 失敗，可能檔案不存在或權限不足。\n");
+        }
+        printf("是否建立測試檔？(size,MB)：");
+        int size1;
+        scanf(" %d", &size1);
+        if (size1 <= 0) {
+            size1 = 10;
+        }
+        if (size1 > 0) {
             printf("📦 正在產生 input.txt...\n");
-            printf("use cmd :\'\033[1;33m dd if=/dev/urandom of=input.txt bs=1M count=10 status=none \033[0m\'\n");
-
-            int ret = system("dd if=/dev/urandom of=input.txt bs=1M count=10 status=none");
+            printf("use cmd :'\033[1;33m dd if=/dev/urandom of=input.txt bs=1M count=%d status=none \033[0m'\n", size1);
+            
+            // 建立命令字串
+            char cmd[256];
+            snprintf(cmd, sizeof(cmd), "dd if=/dev/urandom of=input.txt bs=1M count=%d status=none", size1);
+            
+            int ret = system(cmd);
             if (ret != 0) {
                 printf("❌ 無法建立測試檔案，請確認系統支援 dd 指令。\n");
                 return 1;
             }
             printf("✅ 檔案產生完成。\n");
-        } else {
-            printf("⚠️ 未建立檔案，程式終止。\n");
-            return 1;
         }
     }
 
