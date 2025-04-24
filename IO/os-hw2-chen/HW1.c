@@ -15,7 +15,7 @@
 
 void print_elapsed(struct timespec start, struct timespec end, const char* label) {
     double elapsed = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1e9;
-    printf("[%s] 執行時間：%.6f 秒\n", label, elapsed);
+    printf("[%s] 執行時間： %.6f 秒\n", label, elapsed);
 }
 
 void blocking_io_copy(const char* src, const char* dst) {

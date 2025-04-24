@@ -48,7 +48,7 @@ void generate_input_file() {
             int ret = system(cmd);
             if (ret != 0) {
                 printf("❌ 無法建立測試檔案，請確認系統支援 dd 指令。\n");
-                return 1;
+                return ;
             }
             printf("✅ 檔案產生完成。\n");
         }
@@ -59,7 +59,7 @@ void generate_input_file() {
 void clear_cache() {
     printf("📦 清除 Page Cache...\n");
     printf("use cmd :\'\033[1;33msync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null\033[0m\'\n");
-    system("sync; echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null");
+    system("sync; echo 3 | sudo tee /proc/sys/vm/*  *//drop_caches > /dev/null");
 }
 
 // ---------- Blocking I/O ----------
